@@ -47,14 +47,6 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
 
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', Password::min(8)->letters()->mixedCase()->numbers()->symbols(), 'confirmed'],
-        ]);
-    }
     public function __construct()
     {
         $this->middleware('guest');
@@ -66,18 +58,32 @@ class RegisterController extends Controller
         return view('auth.register', ['admin' => 'admin']);
     }
 
-    public function showUser()
+    public function showUserRegister()
     {
         return view('auth.register');
     }
 
-    protected function create(array $data)
+    protected function userRegister(Request $req)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+        $req->validate([
+            'name' => 'max:255|string|required',
+            'email' => 'required|email|unique:admins|max:50',
+            'password' => [
+                'required',
+                'confirmed',
+                'string',
+                Password::min(8)->letters()->mixedCase()->numbers()->symbols(),
+            ],
         ]);
+
+        User::create([
+            'name' => $req->name,
+            'email' => $req->email,
+            'password' => Hash::make($req->password),
+        ]);
+
+        return redirect()->intended('/login');
+
     }
 
     public function createAdmin(Request $req)
