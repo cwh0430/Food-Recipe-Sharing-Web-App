@@ -40,53 +40,13 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
-        $this->middleware('guest:admin')->except('logout');
-    }
-
-    public function showAdminLogin()
-    {
-        return view('auth.login', ['admin' => 'admin']);
-    }
-
-    public function showUserLogin()
-    {
-        return view('auth.login');
-    }
-
-    public function adminLogin(Request $req)
-    {
-
-        $req->validate([
-            'email' => 'required|email|max:30',
-            'password' => 'required|max:50',
-        ]);
-
-        if (Auth::guard('admin')->attempt(['email' => $req->email, 'password' => $req->password], $req->get('remember'))) {
-            return redirect('/admin/home');
-        }
-
-        return back()->withInput([$req->only('email', 'remember')]);
-    }
-
-    public function userLogin(Request $req)
-    {
-        $req->validate([
-            'email' => 'required|email|max:50',
-            'password' => 'required|max:50',
-        ]);
-
-        if (Auth::attempt(['email' => $req->email, 'password' => $req->password], $req->get('remember'))) {
-            return redirect()->intended('/');
-        }
-
-        return back()->withInput([$req->only('email', 'remember')]);
     }
 
     public function logout()
     {
         if (Auth::guard('admin')->check()) {
             Auth::guard('admin')->logout();
-            return redirect('/login/admin');
+            return redirect('/login');
         }
 
         Auth::logout();

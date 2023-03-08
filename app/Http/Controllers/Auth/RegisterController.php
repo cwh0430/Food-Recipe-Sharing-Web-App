@@ -50,7 +50,6 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-        $this->middleware('guest:admin');
     }
 
     /**
@@ -87,61 +86,9 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function showAdmin()
-    {
-        return view('auth.register', ['admin' => 'admin']);
-    }
-
-    // public function showUserRegister()
-    // {
-    //     return view('auth.register');
-    // }
-
-    // protected function userRegister(Request $req)
-    // {
-    //     $req->validate([
-    //         'name' => 'max:255|string|required',
-    //         'email' => 'required|email|unique:admins|max:50',
-    //         'password' => [
-    //             'required',
-    //             'confirmed',
-    //             'string',
-    //             Password::min(8)->letters()->mixedCase()->numbers()->symbols(),
-    //         ],
-    //     ]);
-
-    //     User::create([
-    //         'name' => $req->name,
-    //         'email' => $req->email,
-    //         'password' => Hash::make($req->password),
-    //     ]);
-
-    //     return redirect()->intended('/login');
-
-    // }
-
-    public function createAdmin(Request $req)
-    {
-        $req->validate([
-            'name' => 'max:255|string|required',
-            'email' => 'required|email|unique:admins|max:50',
-            'password' => [
-                'required',
-                'confirmed',
-                'string',
-                Password::min(8)->letters()->mixedCase()->numbers()->symbols(),
-            ],
-        ]);
 
 
-        Admin::create([
-            'name' => $req->name,
-            'email' => $req->email,
-            'password' => Hash::make($req->password),
-        ]);
 
-        return redirect()->intended('/login/admin');
-    }
 
 
 }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\RecipeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,23 +40,20 @@ Auth::routes();
 // Route::post('/password/reset', [App\Http\Controllers\Auth\ResetPasswordController::class, 'reset']);
 
 
-//FOR ADMIN
-Route::get('/login/admin', [LoginController::class, 'showAdminLogin'])->name('admin.login');
 
-Route::get('/register/admin', [RegisterController::class, 'showAdmin'])->name('admin.register');
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::post('/login/admin', [LoginController::class, 'adminLogin']);
-
-Route::post('/register/admin', [RegisterController::class, 'createAdmin']);
 
 
-Route::group(['middleware' => 'auth:admin'], function () {
 
-    Route::get('/admin/home', [App\Http\Controllers\AdminHomeController::class, 'index']);
-});
+Route::get('/home/admin', [RecipeController::class, 'adminIndex'])->middleware('protectedPage');
 
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [RecipeController::class, 'index']);
+Route::get('/home', [RecipeController::class, 'index'])->name('home');
+
+//try define recipe index and put it as / route
+//try define recipe create update and delete follow jason 
+// then put can for admin
+// try putting admin and user de home tgt

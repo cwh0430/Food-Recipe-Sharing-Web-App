@@ -41,9 +41,9 @@ class RecipePolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function create(Admin $admin)
+    public function create(User $user)
     {
-        return true;
+        return $user->isAdmin;
     }
 
     /**
@@ -53,9 +53,9 @@ class RecipePolicy
      * @param  \App\Models\Recipe  $recipe
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(Admin $admin, Recipe $recipe)
+    public function update(User $user, Recipe $recipe)
     {
-        return true;
+        return $user->isAdmin;
     }
 
     /**
@@ -65,9 +65,9 @@ class RecipePolicy
      * @param  \App\Models\Recipe  $recipe
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(Admin $admin, Recipe $recipe)
+    public function delete(User $user, Recipe $recipe)
     {
-        return true;
+        return $user->isAdmin;
     }
 
 // /**
@@ -77,7 +77,7 @@ class RecipePolicy
 //  * @param  \App\Models\Recipe  $recipe
 //  * @return \Illuminate\Auth\Access\Response|bool
 //  */
-// public function restore(Admin $admin, Recipe $recipe)
+// public function restore(User $user, Recipe $recipe)
 // {
 //     return true;
 // }

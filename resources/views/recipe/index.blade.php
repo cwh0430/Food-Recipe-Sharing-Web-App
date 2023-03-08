@@ -4,6 +4,12 @@
 
 
 <div class="container">
+
+    @if (session('msg'))
+    <div class="alert alert-danger" role="alert">
+        {{session('msg')}}
+    </div>
+    @endif
     <div class="row">
         @foreach ($recipes as $recipe)
         <div class="col-sm-4 mb-3">

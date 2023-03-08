@@ -17,6 +17,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $guard = 'admin';
     protected $fillable = [
         'name',
         'email',
@@ -31,6 +33,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'isAdmin',
     ];
 
     /**
