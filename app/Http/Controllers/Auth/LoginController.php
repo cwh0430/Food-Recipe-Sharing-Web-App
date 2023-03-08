@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Recipe;
 use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Password;
@@ -61,7 +62,7 @@ class LoginController extends Controller
         ]);
 
         if (Auth::guard('admin')->attempt(['email' => $req->email, 'password' => $req->password], $req->get('remember'))) {
-            return redirect()->intended('/admin');
+            return redirect('/admin/home');
         }
 
         return back()->withInput([$req->only('email', 'remember')]);
@@ -75,7 +76,7 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt(['email' => $req->email, 'password' => $req->password], $req->get('remember'))) {
-            return redirect()->intended('/home');
+            return redirect()->intended('/');
         }
 
         return back()->withInput([$req->only('email', 'remember')]);

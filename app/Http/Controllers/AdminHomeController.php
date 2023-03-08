@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class AdminHomeController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -14,6 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        $this->middleware('auth:admin');
 
     }
 
@@ -25,6 +26,6 @@ class HomeController extends Controller
     public function index()
     {
         $recipes = Recipe::all();
-        return view('home', ['recipes' => $recipes]);
+        return view('admin', ['recipes' => $recipes]);
     }
 }

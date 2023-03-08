@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\Password;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
@@ -53,38 +53,72 @@ class RegisterController extends Controller
         $this->middleware('guest:admin');
     }
 
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => [
+                'required',
+                Password::min(8)->letters()->mixedCase()->numbers()->symbols(),
+                'confirmed'
+            ],
+        ]);
+    }
+
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return \App\Models\User
+     */
+    protected function create(array $data)
+    {
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+    }
+
     public function showAdmin()
     {
         return view('auth.register', ['admin' => 'admin']);
     }
 
-    public function showUserRegister()
-    {
-        return view('auth.register');
-    }
+    // public function showUserRegister()
+    // {
+    //     return view('auth.register');
+    // }
 
-    protected function userRegister(Request $req)
-    {
-        $req->validate([
-            'name' => 'max:255|string|required',
-            'email' => 'required|email|unique:admins|max:50',
-            'password' => [
-                'required',
-                'confirmed',
-                'string',
-                Password::min(8)->letters()->mixedCase()->numbers()->symbols(),
-            ],
-        ]);
+    // protected function userRegister(Request $req)
+    // {
+    //     $req->validate([
+    //         'name' => 'max:255|string|required',
+    //         'email' => 'required|email|unique:admins|max:50',
+    //         'password' => [
+    //             'required',
+    //             'confirmed',
+    //             'string',
+    //             Password::min(8)->letters()->mixedCase()->numbers()->symbols(),
+    //         ],
+    //     ]);
 
-        User::create([
-            'name' => $req->name,
-            'email' => $req->email,
-            'password' => Hash::make($req->password),
-        ]);
+    //     User::create([
+    //         'name' => $req->name,
+    //         'email' => $req->email,
+    //         'password' => Hash::make($req->password),
+    //     ]);
 
-        return redirect()->intended('/login');
+    //     return redirect()->intended('/login');
 
-    }
+    // }
 
     public function createAdmin(Request $req)
     {
