@@ -10,4 +10,8 @@ class AboutController extends Controller
     {
         return view('about.team');
     }
+    public function company()
+    {
+        return view('about.company');
+    }
 }
