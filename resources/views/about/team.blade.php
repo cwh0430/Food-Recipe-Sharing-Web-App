@@ -40,7 +40,7 @@
         }
 
         .container {
-            padding: 0 16px;
+            padding: 10px 16px;
         }
 
         .container::after,
@@ -63,7 +63,7 @@
             background-color: #000;
             text-align: center;
             cursor: pointer;
-            width: 100%;
+            width: 50%;
         }
 
         .button:hover {
@@ -81,21 +81,22 @@
 
 @section('content')
     <div class="about-section">
-        <h1>About Us Page</h1>
+        <h1>About Our Team</h1>
         <p>Some text about who we are and what we do.</p>
         <p>Resize the browser window to see that this page is responsive by the way.</p>
     </div>
-
-    <h2 style="text-align:center">Our Team</h2>
+    <br><br><br>
+    <h2 style="text-align:center">Our Team Members</h2>
     <div class="row">
         <div class="column">
             <div class="card">
-                <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
                 <div class="container">
-                    <h2>Jane Doe</h2>
+                    <img src="https://wallpapers-clan.com/wp-content/uploads/2022/09/genshin-impact-hu-tao-pfp-31.jpg"
+                        alt="Hu Tao" style="width:20%; float:left; margin-right:5%;">
+                    <h2>Hu Tao</h2>
                     <p class="title">CEO & Founder</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>jane@example.com</p>
+                    <p>hutao@example.com</p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -103,12 +104,13 @@
 
         <div class="column">
             <div class="card">
-                <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
                 <div class="container">
-                    <h2>Mike Ross</h2>
-                    <p class="title">Art Director</p>
+                    <img src="https://wallpapers-clan.com/wp-content/uploads/2022/09/genshin-impact-hu-tao-pfp-31.jpg"
+                        alt="Hu Tao" style="width:20%; float:left; margin-right:5%;">
+                    <h2>Hu Tao</h2>
+                    <p class="title">CEO & Founder</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>mike@example.com</p>
+                    <p>hutao@example.com</p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -116,12 +118,41 @@
 
         <div class="column">
             <div class="card">
-                <img src="/w3images/team3.jpg" alt="John" style="width:100%">
                 <div class="container">
-                    <h2>John Doe</h2>
-                    <p class="title">Designer</p>
+                    <img src="https://wallpapers-clan.com/wp-content/uploads/2022/09/genshin-impact-hu-tao-pfp-31.jpg"
+                        alt="Hu Tao" style="width:20%; float:left; margin-right:5%;">
+                    <h2>Hu Tao</h2>
+                    <p class="title">CEO & Founder</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>john@example.com</p>
+                    <p>hutao@example.com</p><br><br>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <img src="https://wallpapers-clan.com/wp-content/uploads/2022/09/genshin-impact-hu-tao-pfp-31.jpg"
+                        alt="Hu Tao" style="width:20%; float:left; margin-right:5%;">
+                    <h2>Hu Tao</h2>
+                    <p class="title">CEO & Founder</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>hutao@example.com</p><br><br>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <div class="container">
+                    <img src="https://wallpapers-clan.com/wp-content/uploads/2022/09/genshin-impact-hu-tao-pfp-31.jpg"
+                        alt="Hu Tao" style="width:20%; float:left; margin-right:5%;">
+                    <h2>Hu Tao</h2>
+                    <p class="title">CEO & Founder</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>hutao@example.com</p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
