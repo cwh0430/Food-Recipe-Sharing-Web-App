@@ -54,7 +54,7 @@ Route::get('/', [RecipeController::class, 'index']);
 Route::get('/home', [RecipeController::class, 'index'])->name('home');
 Route::get('/recipes', [RecipeController::class, 'recipes'])->name('recipes');
 Route::get('/favourites', [RecipeController::class, 'favourites'])->name('favourites');
-Route::get('/faqs', [RecipeController::class, 'faqs'])->name('faqs');
+Route::get('/placeholder', [RecipeController::class, 'placeholder'])->name('placeholder');
 
 //try define recipe index and put it as / route
 //try define recipe create update and delete follow jason 

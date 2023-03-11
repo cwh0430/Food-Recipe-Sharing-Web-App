@@ -33,4 +33,16 @@ class RecipeController extends Controller
     {
         return view('recipe.delete');
     }
+
+    public function recipes()
+    {
+        $recipes = Recipe::all();
+        return view('recipe.recipes', ['recipes' => $recipes]);
+    }
+
+    public function favourites()
+    {
+        $recipes = Recipe::all();
+        return view('recipe.favourites', ['recipes' => $recipes]);
+    }
 }
