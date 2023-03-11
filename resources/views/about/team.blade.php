@@ -105,12 +105,12 @@
         <div class="column">
             <div class="card">
                 <div class="container">
-                    <img src="https://wallpapers-clan.com/wp-content/uploads/2022/09/genshin-impact-hu-tao-pfp-31.jpg"
-                        alt="Hu Tao" style="width:20%; float:left; margin-right:5%;">
-                    <h2>Hu Tao</h2>
-                    <p class="title">CEO & Founder</p>
+                    <img src="https://static.wikia.nocookie.net/55074577-6f6c-441d-9384-ba26b4f23336/scale-to-width/755"
+                        alt="Zhongli" style="width:20%; float:left; margin-right:5%;">
+                    <h2>Zhong Li</h2>
+                    <p class="title">Assistance</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>hutao@example.com</p><br><br>
+                    <p>zhongli@example.com</p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -119,12 +119,12 @@
         <div class="column">
             <div class="card">
                 <div class="container">
-                    <img src="https://wallpapers-clan.com/wp-content/uploads/2022/09/genshin-impact-hu-tao-pfp-31.jpg"
-                        alt="Hu Tao" style="width:20%; float:left; margin-right:5%;">
-                    <h2>Hu Tao</h2>
-                    <p class="title">CEO & Founder</p>
+                    <img src="https://i.pinimg.com/736x/aa/32/6a/aa326aa917ea8e66d904a89f4d0a4b3a.jpg" alt="Yoimiya"
+                        style="width:20%; float:left; margin-right:5%;">
+                    <h2>Naganohara Yoimiya</h2>
+                    <p class="title">Designer</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>hutao@example.com</p><br><br>
+                    <p>yoimiya@example.com</p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -133,12 +133,12 @@
         <div class="column">
             <div class="card">
                 <div class="container">
-                    <img src="https://wallpapers-clan.com/wp-content/uploads/2022/09/genshin-impact-hu-tao-pfp-31.jpg"
-                        alt="Hu Tao" style="width:20%; float:left; margin-right:5%;">
-                    <h2>Hu Tao</h2>
-                    <p class="title">CEO & Founder</p>
+                    <img src="https://videogames.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk0OTA1MDMxNzc2OTM3MTIy/genshin-impact-raiden-shogun.jpg"
+                        alt="Raiden" style="width:20%; float:left; margin-right:5%;">
+                    <h2>Raiden Shogun</h2>
+                    <p class="title">Discipline Manager</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>hutao@example.com</p><br><br>
+                    <p>raiden@example.com</p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -147,12 +147,12 @@
         <div class="column">
             <div class="card">
                 <div class="container">
-                    <img src="https://wallpapers-clan.com/wp-content/uploads/2022/09/genshin-impact-hu-tao-pfp-31.jpg"
-                        alt="Hu Tao" style="width:20%; float:left; margin-right:5%;">
-                    <h2>Hu Tao</h2>
-                    <p class="title">CEO & Founder</p>
+                    <img src="https://i.pinimg.com/originals/bb/e6/6c/bbe66ccdca956f081f2d0750a44b6172.jpg" alt="Itto"
+                        style="width:20%; float:left; margin-right:5%;">
+                    <h2>Arataki Itto</h2>
+                    <p class="title">Entertainment Manager</p>
                     <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>hutao@example.com</p><br><br>
+                    <p>itto@example.com</p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
