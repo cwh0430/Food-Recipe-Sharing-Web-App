@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -55,6 +56,13 @@ Route::get('/home', [RecipeController::class, 'index'])->name('home');
 Route::get('/recipes', [RecipeController::class, 'recipes'])->name('recipes');
 Route::get('/favourites', [RecipeController::class, 'favourites'])->name('favourites');
 Route::get('/placeholder', [RecipeController::class, 'placeholder'])->name('placeholder');
+
+//about and contact us
+Route::get('/team', [AboutController::class, 'team'])->name('team');
+Route::get('/placeholder', [AboutController::class, 'placeholder'])->name('placeholder');
+Route::get('/placeholder', [AboutController::class, 'placeholder'])->name('placeholder');
+
+
 
 //try define recipe index and put it as / route
 //try define recipe create update and delete follow jason 
