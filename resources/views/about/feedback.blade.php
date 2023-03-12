@@ -1,145 +1,127 @@
 @extends('layouts.app')
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FoodBank | Feedback</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.5s;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+
 @section('content')
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-
-            input[type=text],
-            select,
-            textarea {
-                width: 100%;
-                padding: 12px;
-                border: 1px solid rgb(70, 68, 68);
-                border-radius: 4px;
-                resize: vertical;
-            }
-
-            input[type=email],
-            select,
-            textarea {
-                width: 100%;
-                padding: 12px;
-                border: 1px solid rgb(70, 68, 68);
-                border-radius: 4px;
-                resize: vertical;
-            }
-
-            label {
-                padding: 12px 12px 12px 0;
-                display: inline-block;
-            }
-
-            input[type=submit] {
-                background-color: rgb(37, 116, 161);
-                color: white;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                float: right;
-            }
-
-            input[type=submit]:hover {
-                background-color: #45a049;
-            }
-
-            .container {
-                border-radius: 5px;
-                background-color: #f2f2f2;
-                padding: 20px;
-            }
-
-            .col-25 {
-                float: left;
-                width: 25%;
-                margin-top: 6px;
-            }
-
-            .col-75 {
-                float: left;
-                width: 75%;
-                margin-top: 6px;
-            }
-
-            /* Clear floats after the columns */
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
-            /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-        </style>
-    </head>
-
-
 
     <body>
-        <h2>FEED BACK FORM</h2>
-        <div class="container">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+        <div style="padding:50px; width:60%; margin:0 auto;">
+            <h1 style="text-align:center; font-weight:bold; font-size: 40px">Feedback</h1><br><br>
             <form>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="fname">First Name</label>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">First Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Last Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Last Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Country</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option value="none">Select Your Country</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                        <option value="russia">Russia</option>
+                        <option value="japan">Japan</option>
+                        <option value="india">India</option>
+                        <option value="china">China</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="korea">Korea</option>
+                        <option value="mond">Mondstadt</option>
+                        <option value="liyue">Liyue</option>
+                        <option value="inazuma">Inazuma</option>
+                        <option value="sumeru">Sumeru</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Phone Number</label>
+                    <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="012-3456789"
+                        pattern="[0-9]{3}-[0-9]{7}">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Your experience on our website</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="experience" id="inlineRadio1"
+                            value="Very Satisfied">
+                        <label class="form-check-label" for="inlineRadio1">Very Satisfied</label>
                     </div>
-                    <div class="col-75">
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="experience" id="inlineRadio2"
+                            value="Satisfied">
+                        <label class="form-check-label" for="inlineRadio2">Satisfied</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="experience" id="inlineRadio3" value="Okay">
+                        <label class="form-check-label" for="inlineRadio3">Okay</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="experience" id="inlineRadio4"
+                            value="Unsatisfied">
+                        <label class="form-check-label" for="inlineRadio4">Unsatisfied</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="experience" id="inlineRadio5"
+                            value="Very Unsatisfied">
+                        <label class="form-check-label" for="inlineRadio5">Very Unsatisfied</label>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="lname">Last Name</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                    </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Tell us how we can improve: </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                 </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="email">Mail Id</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="email" id="email" name="mailid" placeholder="Your mail id..">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="country">Country</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="country" name="country">
-                            <option value="none">Select Country</option>
-                            <option value="australia">Australia</option>
-                            <option value="canada">Canada</option>
-                            <option value="usa">USA</option>
-                            <option value="russia">Russia</option>
-                            <option value="japan">Japan</option>
-                            <option value="india">India</option>
-                            <option value="china">China</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="feed_back">Feed Back</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <input type="submit" value="Submit">
-                </div>
+                <button class="button">Submit</button>
             </form>
         </div>
 
     </body>
-
-    </html>
 @endsection
+
+</html>
