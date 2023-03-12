@@ -45,4 +45,26 @@ class RecipeController extends Controller
         $recipes = Recipe::all();
         return view('recipe.favourites', ['recipes' => $recipes]);
     }
+    
+    public function filter(Request $request)
+    {
+        $filter = $request->get('filter');
+
+        switch ($filter) {
+            case 'latest':
+                $recipes = Recipe::latest()->paginate(10);
+                break;
+            case 'favorite':
+                $recipes = Recipe::orderBy('favorites', 'desc')->paginate(10);
+                break;
+            case 'random':
+                $recipes = Recipe::inRandomOrder()->paginate(10);
+                break;
+            default:
+                $recipes = Recipe::paginate(10);
+                break;
+        }
+
+        return view('recipe.recipes', ['recipes' => $recipes]);
+    }
 }
