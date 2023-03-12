@@ -56,11 +56,15 @@ Route::get('/home', [RecipeController::class, 'index'])->name('home');
 Route::get('/recipes', [RecipeController::class, 'recipes'])->name('recipes');
 Route::get('/favourites', [RecipeController::class, 'favourites'])->name('favourites');
 Route::get('/placeholder', [RecipeController::class, 'placeholder'])->name('placeholder');
+Route::get('/recipes/filter', [RecipeController::class, 'filter'])->name('recipes.filter');
 
 //about and contact us
 Route::get('/team', [AboutController::class, 'team'])->name('team');
 Route::get('/company', [AboutController::class, 'company'])->name('company');
 Route::get('/feedback', [AboutController::class, 'feedback'])->name('feedback');
+
+
+
 
 
 
