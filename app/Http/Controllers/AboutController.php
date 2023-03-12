@@ -18,4 +18,8 @@ class AboutController extends Controller
     {
         return view('about.feedback');
     }
+    public function faq()
+    {
+        return view('about.faq');
+    }
 }

@@ -62,6 +62,7 @@ Route::get('/recipes/filter', [RecipeController::class, 'filter'])->name('recipe
 Route::get('/team', [AboutController::class, 'team'])->name('team');
 Route::get('/company', [AboutController::class, 'company'])->name('company');
 Route::get('/feedback', [AboutController::class, 'feedback'])->name('feedback');
+Route::get('/faq', [AboutController::class, 'faq'])->name('faq');
 
 
 
