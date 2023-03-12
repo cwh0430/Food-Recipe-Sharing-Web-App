@@ -60,7 +60,7 @@ Route::get('/placeholder', [RecipeController::class, 'placeholder'])->name('plac
 //about and contact us
 Route::get('/team', [AboutController::class, 'team'])->name('team');
 Route::get('/company', [AboutController::class, 'company'])->name('company');
-Route::get('/placeholder', [AboutController::class, 'placeholder'])->name('placeholder');
+Route::get('/feedback', [AboutController::class, 'feedback'])->name('feedback');
 
 
 

@@ -215,7 +215,7 @@
                         <div class="col-sm-6 col-md-3 item">
                             <h3>Contact Us</h3>
                             <ul>
-                                <li><a href="#">Feedback</a></li>
+                                <li><a href="{{ route('feedback') }}">Feedback</a></li>
                                 <li><a href="#">FAQs</a></li>
                             </ul>
                         </div>

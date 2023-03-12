@@ -14,4 +14,8 @@ class AboutController extends Controller
     {
         return view('about.company');
     }
+    public function feedback()
+    {
+        return view('about.feedback');
+    }
 }
