@@ -11,7 +11,7 @@
     </div>
     @endif
 
-    <ul class="navbar-nav">
+    <ul class="navbar-nav mb-3 ms-auto">
         <li class="nav-item">
             <a class="nav-link" href="{{ route('home') }}"></a>
         </li>
