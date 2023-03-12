@@ -3,6 +3,7 @@
 <html>
 
 <head>
+    <title>FoodBank | About Our Team</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
@@ -81,8 +82,9 @@
         }
 
         img {
-            width: 25%;
+            width: 28%;
             float: left;
+            margin-left: 5%;
             margin-right: 5%;
         }
     </style>
