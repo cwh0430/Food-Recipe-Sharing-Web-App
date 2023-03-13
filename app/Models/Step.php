@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Step extends Model
 {
     use HasFactory;
+
+    public function getRecipe()
+    {
+        return $this->belongsTo(Recipe::class, 'recipe_id');
+    }
 }
