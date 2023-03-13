@@ -71,6 +71,7 @@ class RecipeController extends Controller
                 break;
         }
 
-        return view('recipe.recipes', ['recipes' => $recipes]);
+        return view('recipe.index', ['recipes' => $recipes]);
     }
+    
 }
