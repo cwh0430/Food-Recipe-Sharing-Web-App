@@ -11,7 +11,7 @@ class Recipe extends Model
 
     public function getIngredients()
     {
-        return $this->belongsToMany(Ingredient::class, 'recipe_ingredients', 'recipe_id', 'ingredient_id');
+        return $this->belongsToMany(Ingredient::class, 'recipe_ingredients', 'recipe_id', 'ingredient_id')->withPivot('quantity', 'units', 'additionalInfo');
     }
 
     public function getSteps()
