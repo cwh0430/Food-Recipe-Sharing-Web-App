@@ -15,15 +15,21 @@ class IngredientSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('ingredient')->insert([
+        DB::table('ingredients')->insert([
             ['name' => 'Spaghetti'],
             ['name' => 'Vegetable Oil'],
             ['name' => 'Scallops'],
             ['name' => 'Butter'],
             ['name' => 'Garlic'],
-            ['name' => 'Grated Lemon Zest'],
-
-
+            ['name' => 'Lemon Zest'],
+            ['name' => 'Red Pepper Flakes'],
+            ['name' => 'Dry Sherry'],
+            ['name' => 'Heavy Cream'],
+            ['name' => 'Salt'],
+            ['name' => 'Pepper'],
+            ['name' => 'Lemon'],
+            ['name' => 'Italian Parsley'],
+            ['name' => 'Parmigiano-Reggiano Cheese'],
         ]);
     }
 }

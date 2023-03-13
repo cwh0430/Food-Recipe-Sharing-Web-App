@@ -42,17 +42,18 @@ Auth::routes();
 
 
 
-
+//for all logout
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
-
-
+//for admin page
 Route::get('/home/admin', [RecipeController::class, 'adminIndex'])->middleware('protectedPage');
 
-
+//for default home page and auth home page
 Route::get('/', [RecipeController::class, 'index']);
 Route::get('/home', [RecipeController::class, 'index'])->name('home');
+
+//state what is this for?
 Route::get('/recipes', [RecipeController::class, 'recipes'])->name('recipes');
 Route::get('/favourites', [RecipeController::class, 'favourites'])->name('favourites');
 Route::get('/placeholder', [RecipeController::class, 'placeholder'])->name('placeholder');
@@ -65,11 +66,5 @@ Route::get('/feedback', [AboutController::class, 'feedback'])->name('feedback');
 Route::get('/faq', [AboutController::class, 'faq'])->name('faq');
 
 
-
-
-
-
-//try define recipe index and put it as / route
-//try define recipe create update and delete follow jason 
-// then put can for admin
-// try putting admin and user de home tgt
+//for recipe policy (C Read detail UD)
+Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show');

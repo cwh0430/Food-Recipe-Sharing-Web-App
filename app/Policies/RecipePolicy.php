@@ -3,7 +3,6 @@
 namespace App\Policies;
 
 use App\Models\User;
-use App\Models\Admin;
 use App\Models\Recipe;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Access\HandlesAuthorization;
@@ -33,6 +32,7 @@ class RecipePolicy
     public function view(User $user, Recipe $recipe)
     {
         return true;
+
     }
 
     /**
@@ -53,7 +53,7 @@ class RecipePolicy
      * @param  \App\Models\Recipe  $recipe
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Recipe $recipe)
+    public function update(User $user)
     {
         return $user->isAdmin;
     }
@@ -65,7 +65,7 @@ class RecipePolicy
      * @param  \App\Models\Recipe  $recipe
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Recipe $recipe)
+    public function delete(User $user)
     {
         return $user->isAdmin;
     }

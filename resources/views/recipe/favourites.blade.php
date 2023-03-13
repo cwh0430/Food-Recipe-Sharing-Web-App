@@ -1,24 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-
-        @if (session('msg'))
-            <div class="alert alert-danger" role="alert">
-                {{ session('msg') }}
-            </div>
-        @endif
-        <div class="row">
-            @foreach ($recipes as $recipe)
-                <div class="col-sm-4 mb-3">
-                    <div class="card food">
-                        <img class="card-img-top" src={{ $recipe->image }} alt="Card image">
-                        <div class="card-body">
-                            <h4>{{ $recipe->name }}</h4>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
+<div class="container">
+    <h1>Favorite Page</h1>
+</div>
 @endsection
