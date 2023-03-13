@@ -28,7 +28,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-
+    
 
     <!-- footer CSS -->
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
@@ -112,7 +112,28 @@
                             @endguest
                         </ul>
 
-
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}"></a>
+                            </li>
+                            <div class="dropdown-divider"></div>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                        class="fas fa-filter"></i></a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item"
+                                        href="{{ route('recipes.filter', ['filter' => 'latest']) }}"
+                                        class="dropdown-item">Latest</a>
+                                    <a class="dropdown-item"
+                                        href="{{ route('recipes.filter', ['filter' => 'favorite']) }}"
+                                        class="dropdown-item">Favorite</a>
+                                    <a class="dropdown-item"
+                                        href="{{ route('recipes.filter', ['filter' => 'random']) }}"
+                                        class="dropdown-item">Random</a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
