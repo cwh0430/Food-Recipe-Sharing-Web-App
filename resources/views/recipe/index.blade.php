@@ -11,25 +11,6 @@
     </div>
     @endif
 
-    <ul class="navbar-nav mb-3 ms-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('home') }}"></a>
-        </li>
-        <div class="dropdown-divider"></div>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"><i class="fas fa-filter"></i></a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="{{ route('recipes.filter', ['filter' => 'latest']) }}"
-                    class="dropdown-item">Latest</a>
-                <a class="dropdown-item" href="{{ route('recipes.filter', ['filter' => 'favorite']) }}"
-                    class="dropdown-item">Favorite</a>
-                <a class="dropdown-item" href="{{ route('recipes.filter', ['filter' => 'random']) }}"
-                    class="dropdown-item">Random</a>
-            </div>
-        </li>
-    </ul>
-
     <div class="row">
         @foreach ($recipes as $recipe)
         <div class="col-sm-4 mb-3">
