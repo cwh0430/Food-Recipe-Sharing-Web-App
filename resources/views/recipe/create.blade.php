@@ -3,24 +3,24 @@
 @section('content')
 
 <div class="container">
-    <form action="#" method="POST">
-        @csrf
+  {{-- <form action="#" method="POST">
+    @csrf
 
-        <h2>Cooking Steps</h2>
+    <h2>Cooking Steps</h2>
 
-        <div id="steps">
-            <div class="step">
-                <label for="step1">Step 1</label>
-                <input type="text" name="steps[]" id="step1">
-            </div>
-        </div>
+    <div id="steps">
+      <div class="step">
+        <label for="step1">Step 1</label>
+        <input type="text" name="steps[]" id="step1">
+      </div>
+    </div>
 
-        <button type="button" id="add-step">Add Another Step</button>
-        <button type="submit">Save</button>
-    </form>
+    <button type="button" id="add-step">Add Another Step</button>
+    <button type="submit">Save</button>
+  </form>
 
-    <script>
-        const addStepButton = document.querySelector('#add-step');
+  <script>
+    const addStepButton = document.querySelector('#add-step');
         const stepsContainer = document.querySelector('#steps');
       
         let stepCount = 1;
@@ -37,7 +37,7 @@
       
           stepsContainer.insertAdjacentHTML('beforeend', newStep);
         });
-    </script>
-</div>
-
+  </script>
+</div> --}}
+<h2>Create Page</h2>
 @endsection

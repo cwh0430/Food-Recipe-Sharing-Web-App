@@ -43,7 +43,7 @@ class RecipePolicy
      */
     public function create(User $user)
     {
-        return $user->isAdmin;
+        return $user->isAdmin == 1;
     }
 
     /**
@@ -55,7 +55,7 @@ class RecipePolicy
      */
     public function update(User $user)
     {
-        return $user->isAdmin;
+        return $user->isAdmin == 1;
     }
 
     /**
@@ -67,7 +67,7 @@ class RecipePolicy
      */
     public function delete(User $user)
     {
-        return $user->isAdmin;
+        return $user->isAdmin == 1;
     }
 
 // /**

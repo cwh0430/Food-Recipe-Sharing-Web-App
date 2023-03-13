@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Recipe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class RecipeController extends Controller
 {
@@ -25,9 +26,13 @@ class RecipeController extends Controller
         $recipes = Recipe::all();
         return view('recipe.admin', ['recipes' => $recipes]);
     }
-    public function create()
+    public function store()
     {
-        $this->authorize('create');
+        // $this->authorize('create', Recipe::class);
+        if (Gate::denies('isAdmin')) {
+            session()->flash('msg', 'You are unauthorized');
+            return redirect()->route('home');
+        }
         return view('recipe.create');
     }
 
