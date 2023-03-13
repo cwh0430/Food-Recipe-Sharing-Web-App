@@ -74,3 +74,4 @@ Route::get('/faq', [AboutController::class, 'faq'])->name('faq');
 
 //for recipe policy (C Read detail UD)
 Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show');
+Route::get('/recipes/new', [RecipeController::class, 'create']);

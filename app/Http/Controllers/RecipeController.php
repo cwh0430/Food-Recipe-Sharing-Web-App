@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class RecipeController extends Controller
 {
-    
+
     public function index()
     {
-        $recipes = Recipe::all();
+        $recipes = Recipe::paginate(9);
         return view('recipe.index', ['recipes' => $recipes]);
     }
 
@@ -27,6 +27,7 @@ class RecipeController extends Controller
     }
     public function create()
     {
+        $this->authorize('create');
         return view('recipe.create');
     }
 
