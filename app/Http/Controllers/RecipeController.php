@@ -14,10 +14,16 @@ class RecipeController extends Controller
         return view('recipe.index', ['recipes' => $recipes]);
     }
 
+    public function show($id)
+    {
+        $recipe = Recipe::find($id);
+        return view('recipe.show', ['recipe' => $recipe]);
+    }
+
     public function adminIndex()
     {
         $recipes = Recipe::all();
-        return view('recipe.recipelist', ['recipes' => $recipes]);
+        return view('recipe.admin', ['recipes' => $recipes]);
     }
     public function create()
     {
@@ -45,7 +51,7 @@ class RecipeController extends Controller
         $recipes = Recipe::all();
         return view('recipe.favourites', ['recipes' => $recipes]);
     }
-    
+
     public function filter(Request $request)
     {
         $filter = $request->get('filter');

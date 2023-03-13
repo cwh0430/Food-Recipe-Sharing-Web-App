@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ingredient extends Model
+class Step extends Model
 {
     use HasFactory;
 
     public function getRecipe()
     {
-        return $this->belongsToMany(Recipe::class, 'recipe_ingredients', 'ingredient_id', 'recipe_id');
+        return $this->belongsTo(Recipe::class, 'recipe_id');
     }
 }
