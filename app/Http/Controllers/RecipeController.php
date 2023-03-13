@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class RecipeController extends Controller
 {
-
+    
     public function index()
     {
         $recipes = Recipe::all();
@@ -71,6 +71,12 @@ class RecipeController extends Controller
                 break;
         }
 
-        return view('recipe.recipes', ['recipes' => $recipes]);
+        return view('recipe.index', ['recipes' => $recipes]);
+    }
+
+    public function recommendations()
+    {
+        $recommendedWords = ['dinner', 'lunch', 'vegetarian', 'desserts'];
+        return view('recommendations', compact('recommendedWords'));
     }
 }

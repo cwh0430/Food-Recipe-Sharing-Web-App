@@ -57,7 +57,13 @@ Route::get('/home', [RecipeController::class, 'index'])->name('home');
 Route::get('/recipes', [RecipeController::class, 'recipes'])->name('recipes');
 Route::get('/favourites', [RecipeController::class, 'favourites'])->name('favourites');
 Route::get('/placeholder', [RecipeController::class, 'placeholder'])->name('placeholder');
+
+//filter
 Route::get('/recipes/filter', [RecipeController::class, 'filter'])->name('recipes.filter');
+
+//recommendation
+Route::get('/recipes/recommendations', [RecipeController::class, 'recommendations'])->name('recommendations');
+
 
 //about and contact us
 Route::get('/team', [AboutController::class, 'team'])->name('team');
