@@ -1,43 +1,39 @@
 @extends('layouts.app')
 
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container">
-  {{-- <form action="#" method="POST">
-    @csrf
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodBank | FAQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/faq.css') }}">
+</head>
 
-    <h2>Cooking Steps</h2>
+<body style="margin-top: 5%">
+  <div class="container">
+    <form action="#" method="POST">
+      @csrf
 
-    <div id="steps">
-      <div class="step">
-        <label for="step1">Step 1</label>
-        <input type="text" name="steps[]" id="step1">
+      <h2>Cooking Steps</h2>
+
+      <div id="steps">
+        <div class="step">
+          <label for="step1">Step 1</label>
+          <input type="text" name="steps[]" id="step1">
+        </div>
       </div>
-    </div>
 
-    <button type="button" id="add-step">Add Another Step</button>
-    <button type="submit">Save</button>
-  </form>
+      <button type="button" id="add-step">Add Another Step</button>
+      <button type="submit">Save</button>
+    </form>
+  </div>
 
-  <script>
-    const addStepButton = document.querySelector('#add-step');
-        const stepsContainer = document.querySelector('#steps');
-      
-        let stepCount = 1;
-      
-        addStepButton.addEventListener('click', () => {
-          stepCount++;
-      
-          const newStep = `
-            <div class="step">
-              <label for="step${stepCount}">Step ${stepCount}</label>
-              <input type="text" name="steps[]" id="step${stepCount}">
-            </div>
-          `;
-      
-          stepsContainer.insertAdjacentHTML('beforeend', newStep);
-        });
-  </script>
-</div> --}}
-<h2>Create Page</h2>
-@endsection
+
+  <script src="{{ asset('js/create.js') }}"></script>
+
+</body>
+
+</html>
