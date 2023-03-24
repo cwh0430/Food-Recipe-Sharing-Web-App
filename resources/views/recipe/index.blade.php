@@ -27,25 +27,43 @@
             </ul>
         </div>
         <div class="col">
-            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >LUNCH</button>            
+            <form action="{{ route('home') }}">
+                @csrf
+                <button type="submit" class="my-button">Lunch</button>
+            </form>
         </div>
         <div class="col">
-            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >DINNER</button>            
+            <form action="{{ route('home') }}">
+                @csrf
+                <button type="submit" class="my-button">BREAKFAST</button>
+            </form>            
         </div>
         <div class="col">
-            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >DESSERT</button>            
+            <form action="{{ route('home') }}">
+                @csrf
+                <button type="submit" class="my-button">VEGE</button>
+            </form>            
+        </div>
+
+        <div class="col">
+        <form action="{{ route('home') }}">
+                @csrf
+                <button type="submit" class="my-button">DINNER</button>
+            </form>           
         </div>
         <div class="col">
-            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >VEGETARIAN</button>           
+        <form action="{{ route('home') }}">
+                @csrf
+                <button type="submit" class="my-button">DESSERTS</button>
+            </form>            
         </div>
         <div class="col">
-            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >CAKE</button>            
-        </div>
-        <div class="col">
-            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >MEAT</button>            
+        <form action="{{ route('home') }}">
+                @csrf
+                <button type="submit" class="my-button">BREAD</button>
+            </form>            
         </div>
     </div>
-
     <div class="row">
 
       @foreach ($recipes as $recipe)
@@ -77,7 +95,7 @@
         font-size: 12px;
         margin: 10px 2px;
         cursor: pointer;
-        width: 100px;
+        width: 111px;
         height: 40px;   
     }
 
@@ -94,7 +112,7 @@
 
     .my-button:hover {
         /* background-color: lightgrey; */
-        transform: scale(1.2);
-        transition: all .2s ease-in-out;
+        transform: scale(1.5);
+        transition: all .4s ease-in-out;
     }
 </style>
