@@ -20,8 +20,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{ route('recipes.filter', ['filter' => 'latest']) }}"
                             class="dropdown-item">Latest</a>
-                        <a class="dropdown-item" href="{{ route('recipes.filter', ['filter' => 'favorite']) }}"
-                            class="dropdown-item">Favorite</a>
+                        
                         <a class="dropdown-item" href="{{ route('recipes.filter', ['filter' => 'random']) }}"
                             class="dropdown-item">Random</a>
                     </div>

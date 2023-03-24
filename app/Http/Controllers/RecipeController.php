@@ -83,6 +83,6 @@ class RecipeController extends Controller
     public function recommendations()
     {
         $recommendedWords = ['dinner', 'lunch', 'vegetarian', 'desserts'];
-        return view('recommendations', compact('recommendedWords'));
+        return view('recommendations', ('recommendedWords'));
     }
 }
