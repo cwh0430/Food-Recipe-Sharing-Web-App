@@ -25,7 +25,7 @@
           <input type="text" name="steps[]" id="step1">
         </div>
       </div>
-
+      
       <button type="button" id="add-step">Add Another Step</button>
       <button type="submit">Save</button>
     </form>
