@@ -10,7 +10,7 @@
     </div>
     @endif
 
-    <div class="row align-items-start">
+    <div class="button-container">
         <div class="col">
             <ul class="navbar-nav mr-auto">
                 <div class="dropdown-divider"></div>
@@ -20,26 +20,35 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="{{ route('recipes.filter', ['filter' => 'latest']) }}"
                             class="dropdown-item">Latest</a>
-                        
                         <a class="dropdown-item" href="{{ route('recipes.filter', ['filter' => 'random']) }}"
                             class="dropdown-item">Random</a>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="col"><a href="{{ route('home') }}">Lunch</a>&nbsp;&nbsp;</div>
-        <div class="col"><a href="{{ route('home') }}">Vegan</a>&nbsp;&nbsp;</div>
-        <div class="col"><a href="{{ route('home') }}">Dinner</a>&nbsp;&nbsp;</div>
-        <div class="col"><a href="{{ route('home') }}">Desserts</a>&nbsp;&nbsp;</div>
-        <div class="col"><a href="{{ route('home') }}">Chicken</a>&nbsp;&nbsp;</div>
-        <div class="col"><a href="{{ route('home') }}">Vegetarian</a>&nbsp;&nbsp;</div>
+        <div class="col">
+            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >LUNCH</button>            
+        </div>
+        <div class="col">
+            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >DINNER</button>            
+        </div>
+        <div class="col">
+            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >DESSERT</button>            
+        </div>
+        <div class="col">
+            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >VEGETARIAN</button>           
+        </div>
+        <div class="col">
+            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >CAKE</button>            
+        </div>
+        <div class="col">
+            <button class="my-button" onclick= "window.location='{{ route('home') }}'" >MEAT</button>            
+        </div>
     </div>
 
     <div class="row">
 
-
-
-        @foreach ($recipes as $recipe)
+      @foreach ($recipes as $recipe)
         <div class="col-sm-4 mb-3">
             <a href="{{ route('recipes.show', $recipe->id) }}" id="card-link">
                 <div class="card food">
@@ -54,3 +63,38 @@
     </div>
 </div>
 @endsection
+
+
+<style>
+    .my-button {
+        background-color: black; 
+        border: none;
+        color: white;
+        padding: 5px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 10px 2px;
+        cursor: pointer;
+        width: 100px;
+        height: 40px;   
+    }
+
+    .button-container {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2px;
+    }
+        
+    .col {
+        margin: 15px;
+    }
+
+    .my-button:hover {
+        /* background-color: lightgrey; */
+        transform: scale(1.2);
+        transition: all .2s ease-in-out;
+    }
+</style>
