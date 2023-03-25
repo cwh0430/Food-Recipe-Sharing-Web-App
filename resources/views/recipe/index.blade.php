@@ -63,6 +63,12 @@
                 <button type="submit" class="my-button">BREAD</button>
             </form>            
         </div>
+        <div class="col">
+        <form action="{{ route('home') }}">
+                @csrf
+                <button type="submit" class="my-button">WAFFLE</button>
+            </form>            
+        </div>
     </div>
     <div class="row">
 
@@ -95,8 +101,9 @@
         font-size: 12px;
         margin: 10px 2px;
         cursor: pointer;
-        width: 111px;
-        height: 40px;   
+        width: 117px;
+        height: 50px;   
+        border-radius: 5px;
     }
 
     .button-container {
@@ -107,7 +114,7 @@
     }
         
     .col {
-        margin: 15px;
+        margin: 0px 1px;
     }
 
     .my-button:hover {
