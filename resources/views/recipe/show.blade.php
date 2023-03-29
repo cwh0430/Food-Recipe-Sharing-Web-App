@@ -10,7 +10,7 @@
             <h2>Ingredients:</h2>
             <ul>
                 @foreach ($recipe->getIngredients as $ingredient)
-                <li> {{ $ingredient->pivot->quantity }} {{ $ingredient->unit }} {{
+                <li> {{ $ingredient->pivot->quantity }} {{ $ingredient->pivot->units }} {{
                     $ingredient->name }} @if($ingredient->pivot->additionalInfo) ({{ $ingredient->pivot->additionalInfo
                     }}) @endif
 
