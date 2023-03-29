@@ -7,9 +7,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FoodBank | FAQ</title>
+  <title>Create Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('css/faq.css') }}">
 </head>
 
 <body style="margin-top: 5%">
@@ -25,8 +24,22 @@
           <input type="text" name="steps[]" id="step1">
         </div>
       </div>
-      
+
       <button type="button" id="add-step">Add Another Step</button>
+
+
+
+      <h2>Adding Ingredients</h2>
+
+      <div id="ingredients">
+        <div class="ingedient">
+          <label for="ingredient1">Ingredient</label>
+          <input type="text" name="ingredients[]" id="ingredient1">
+        </div>
+      </div>
+
+      <button type="button" id="add-ingredient">Add Another Ingredient</button>
+
       <button type="submit">Save</button>
     </form>
   </div>
