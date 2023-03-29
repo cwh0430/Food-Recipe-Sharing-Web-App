@@ -44,6 +44,10 @@
             text-decoration: none;
             color: inherit;
         }
+
+        .w-5 {
+            display: none
+        }
     </style>
 
     <!-- Scripts -->

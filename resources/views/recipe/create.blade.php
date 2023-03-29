@@ -16,6 +16,8 @@
     <form action="#" method="POST">
       @csrf
 
+      <input type="text" name="title" placeholder="Insert the Recipe Title" style="width:80%;" />
+
       <h2>Cooking Steps</h2>
 
       <div id="steps">
