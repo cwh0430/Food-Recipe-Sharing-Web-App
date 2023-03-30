@@ -80,9 +80,9 @@ class RecipeController extends Controller
         return view('recipe.index', ['recipes' => $recipes]);
     }
 
-    public function recommendations()
-    {
-        $recommendedWords = ['dinner', 'lunch', 'vegetarian', 'desserts'];
-        return view('recommendations', ('recommendedWords'));
-    }
+// public function recommendations()
+// {
+//     $recommendedWords = ['dinner', 'lunch', 'vegetarian', 'desserts'];
+//     return view('recommendations', ('recommendedWords'));
+// }
 }

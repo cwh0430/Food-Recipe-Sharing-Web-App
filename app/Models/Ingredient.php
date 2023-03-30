@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Recipe;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Ingredient extends Model
 {
@@ -11,6 +12,7 @@ class Ingredient extends Model
 
     public function getRecipe()
     {
-        return $this->belongsTo(Recipe::class, 'recipe_ingredients', 'ingredient_id', 'recipe_id');
+        return $this->belongsToMany(Recipe::class, 'recipe_ingredients', 'ingredient_id', 'recipe_id')->withPivot('quantity', 'unit', 'additionalInfo');
+
     }
 }
