@@ -39,12 +39,24 @@
                 <div class="w3-col m6 w3-padding-large">
                     <h1 class="w3-center">About FoodBank</h1><br>
                     <h5 class="w3-center">Tradition since 1889</h5>
-                    <p class="w3-large">The Foodbank was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. We only use <span
-                            class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
+                    <p class="w3-large">Welcome to FoodBank, your one-stop destination for mouth-watering recipes that are
+                        sure to tantalize your taste buds! FoodBank is a food recipe website that was founded in 2015 by a
+                        group of food enthusiasts who shared a passion for cooking and exploring different cuisines. The
+                        founders, who were also concerned about food insecurity in their community, wanted to create a
+                        platform that not only provided delicious recipes but also helped to address hunger in their local
+                        area.</p>
+
+                    <p class="w3-large">With this goal in mind, the founders decided to donate a portion of their website's
+                        advertising
+                        revenue and profits to local food banks and charities that provide meals to those in need. Since its
+                        inception, FoodBank has grown to become a popular website for food lovers around the world, offering
+                        a wide variety of recipes ranging from traditional to contemporary cuisine.</p>
+
+                    <p class="w3-large">At FoodBank, we believe that everyone deserves access to healthy and nutritious
+                        meals, which is why
+                        we have made it our mission to help fight hunger while providing tasty and easy-to-follow recipes
+                        that anyone can make at home. So why not join us in our mission to make the world a better place,
+                        one recipe at a time! <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
                     <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in
                         culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
                         temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -93,8 +105,8 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.2048698349545!2d101.79221021470437!3d3.0396735977863787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc34a8e31363c7%3A0x3bf51032c9d94ecd!2sUTAR%20KA%20Block!5e0!3m2!1sen!2smy!4v1678591593371!5m2!1sen!2smy"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe><br><br><br>
-                <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a
-                    message here:</p>
+                <p>You can also contact us by phone 03-12345678 or email foodbank@foodbank.com, or you can send us feedback
+                    through the <a href="{{ route('feedback') }}">feedback form</a>.</p>
 
 
                 {{-- <form action="/action_page.php" target="_blank">

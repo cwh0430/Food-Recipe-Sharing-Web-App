@@ -153,11 +153,13 @@
                         </div>
                         <div class="col-md-6 item text">
                             <h3>FoodBank</h3>
-                            <p>This is a website that allows everyone to share their food recipes.
-                                dlajdf;adkjfafhakjdhfalkjhjhlaskdfjahdjfaldfkahahhahahahahahhahahaha
-                                hhahhhahahahahahahahahahahahahahahhahahahahahahahahahahahahahahahahah
-                                ahaahhahaahahahhahahahahaha.
-                            </p>
+                            <p>Welcome to our food recipe website! We are dedicated to providing a vast collection of
+                                delicious and easy-to-follow recipes that are perfect for any occasion. Our website is a
+                                go-to resource for home cooks of all levels, offering a diverse range of recipes from
+                                around the world, including appetizers, main courses, desserts, and more. With our
+                                step-by-step instructions, photos, and videos, you can master any dish with confidence
+                                and impress your family and friends with your culinary skills. Whether you're a seasoned
+                                chef or a beginner in the kitchen, we have something for everyone.</p>
                         </div>
                         <div class="col item social">
                             <a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a>
