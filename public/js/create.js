@@ -10,7 +10,7 @@ addStepButton.addEventListener("click", () => {
     <div class="step">
       <label for="step${stepCount}">Step ${stepCount}</label>
       <input type="text" name="steps[]" id="step${stepCount}">
-      <button type="submit" class="remove-btn">Remove</button>
+      <button type="submit" class="btn btn-secondary">Remove</button>
     </div>
   `;
 
