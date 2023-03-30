@@ -18,6 +18,10 @@
 
       <input type="text" name="title" placeholder="Insert the Recipe Title" style="width:80%;" />
 
+      <textarea name="desc" placeholder="Brief Description of the Recipe"></textarea>
+
+      <input type="url" name="img" placeholder="Paste your Image url here">
+
       <h2>Cooking Steps</h2>
 
       <div id="steps">
