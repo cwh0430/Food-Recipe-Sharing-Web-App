@@ -33,6 +33,9 @@
             <div class="w3-row w3-padding-64" id="about">
                 <div class="w3-col m6 w3-padding-large w3-hide-small">
                     <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?cs=srgb&dl=pexels-ash-376464.jpg&fm=jpg"
+                        class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600"
+                        height="750"><br><br><br><br>
+                    <img src="https://www.seriouseats.com/thmb/RLhIA1_2ZVdLa-uPVV9YRt75g20=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2017__07__20170728-sunny-side-up-eggs-vicky-wasik-d07c5480d72e49cc85689c1d6d88495e.jpg"
                         class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
                 </div>
 
@@ -46,21 +49,17 @@
                         platform that not only provided delicious recipes but also helped to address hunger in their local
                         area.</p>
 
-                    <p class="w3-large">With this goal in mind, the founders decided to donate a portion of their website's
-                        advertising
-                        revenue and profits to local food banks and charities that provide meals to those in need. Since its
-                        inception, FoodBank has grown to become a popular website for food lovers around the world, offering
-                        a wide variety of recipes ranging from traditional to contemporary cuisine.</p>
+                    <p class="w3-large w3-text-grey w3-hide-medium">With this goal in mind, the founders decided to donate a
+                        portion of their website's advertising revenue and profits to local food banks and charities that
+                        provide meals to those in need. Since its inception, FoodBank has grown to become a popular website
+                        for food lovers around the world, offering a wide variety of recipes ranging from <span
+                            class="w3-tag w3-light-grey">traditional</span> to
+                        contemporary cuisine.</p>
 
                     <p class="w3-large">At FoodBank, we believe that everyone deserves access to healthy and nutritious
-                        meals, which is why
-                        we have made it our mission to help fight hunger while providing tasty and easy-to-follow recipes
-                        that anyone can make at home. So why not join us in our mission to make the world a better place,
-                        one recipe at a time! <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
-                    <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
-                        temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        meals, which is why we have made it our mission to help fight hunger while providing tasty and
+                        easy-to-follow recipes that anyone can make at home. So why not join us in our mission to make the
+                        world a better place, one recipe at a time!</p>
                 </div>
             </div>
 
@@ -70,24 +69,38 @@
             <div class="w3-row w3-padding-64" id="menu">
                 <div class="w3-col l6 w3-padding-large">
                     <h1 class="w3-center">Our Goal</h1><br>
-                    <h4>Bread Basket</h4>
-                    <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+                    <h4>Provide recipes</h4>
+                    <p class="w3-text-grey">Provide a vast collection of mouth-watering recipes that are easy to follow.</p>
+                    <br>
 
-                    <h4>Honey Almond Granola with Fruits</h4>
-                    <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+                    <h4>Raise awareness</h4>
+                    <p class="w3-text-grey">Raise awareness about food insecurity and hunger in local communities.</p><br>
 
-                    <h4>Belgian Waffle</h4>
-                    <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+                    <h4>Help people in need</h4>
+                    <p class="w3-text-grey">Donate a portion of the website's advertising revenue and profits to local food
+                        banks and charities.</p><br>
 
-                    <h4>Scrambled eggs</h4>
-                    <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+                    <h4>Help fight hunger</h4>
+                    <p class="w3-text-grey">Help fight hunger by providing nutritious meals to those in need.</p><br>
 
-                    <h4>Blueberry Pancakes</h4>
-                    <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+                    <h4>Spread positivity</h4>
+                    <p class="w3-text-grey">Encourage users to make a positive impact by cooking and sharing recipes with
+                        others.</p><br>
+
+                    <h4>Promote healthy lifestyle</h4>
+                    <p class="w3-text-grey">Promote healthy eating habits and lifestyle choices.</p><br>
+
+                    <h4>Provide gathering place</h4>
+                    <p class="w3-text-grey">Create a community of food enthusiasts who share a passion for cooking and
+                        giving back.</p>
                 </div>
 
                 <div class="w3-col l6 w3-padding-large">
-                    <img src="https://www.seriouseats.com/thmb/RLhIA1_2ZVdLa-uPVV9YRt75g20=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2017__07__20170728-sunny-side-up-eggs-vicky-wasik-d07c5480d72e49cc85689c1d6d88495e.jpg"
+                    <img src="https://www.incimages.com/uploaded_files/image/1920x1080/shutterstock_318915104_360067.jpg"
+                        class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+                </div>
+                <div class="w3-col l6 w3-padding-large">
+                    <img src="https://scitechdaily.com/images/Foods-Rich-in-Protein.jpg"
                         class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
                 </div>
             </div>
