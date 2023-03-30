@@ -37,6 +37,10 @@
         <div class="ingedient">
           <label for="ingredient1">Ingredient</label>
           <input type="text" name="ingredients[]" id="ingredient1">
+          <input type="text" name="unit" id="unit">
+          <input type="text" name="amount" id="amount">
+
+
         </div>
       </div>
 
