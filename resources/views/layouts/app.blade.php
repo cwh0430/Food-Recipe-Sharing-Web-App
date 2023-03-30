@@ -91,35 +91,37 @@
                         <ul class="navbar-nav ms-auto">
                             <!-- Authentication Links -->
                             @guest
-                            @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @endif
+                                @if (Route::has('login'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    </li>
+                                @endif
 
-                            @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                            @endif
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </li>
+                                @endif
                             @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
                             @endguest
                         </ul>
                     </div>
@@ -147,22 +149,23 @@
                             <ul>
                                 <li><a href="{{ route('company') }}">Company</a></li>
                                 <li><a href="{{ route('team') }}">Team</a></li>
-                                <li><a href="#">Careers</a></li>
                             </ul>
                         </div>
                         <div class="col-md-6 item text">
                             <h3>FoodBank</h3>
-                            <p>This is a website that allows everyone to share their food recipes.
-                                dlajdf;adkjfafhakjdhfalkjhjhlaskdfjahdjfaldfkahahhahahahahahhahahaha
-                                hhahhhahahahahahahahahahahahahahahhahahahahahahahahahahahahahahahahah
-                                ahaahhahaahahahhahahahahaha.
-                            </p>
+                            <p>Welcome to our food recipe website! We are dedicated to providing a vast collection of
+                                delicious and easy-to-follow recipes that are perfect for any occasion. Our website is a
+                                go-to resource for home cooks of all levels, offering a diverse range of recipes from
+                                around the world, including appetizers, main courses, desserts, and more. With our
+                                step-by-step instructions, photos, and videos, you can master any dish with confidence
+                                and impress your family and friends with your culinary skills. Whether you're a seasoned
+                                chef or a beginner in the kitchen, we have something for everyone.</p>
                         </div>
                         <div class="col item social">
-                            <a href="#"><i class="icon ion-social-facebook"></i></a>
-                            <a href="#"><i class="icon ion-social-twitter"></i></a>
-                            <a href="#"><i class="icon ion-social-snapchat"></i></a>
-                            <a href="#"><i class="icon ion-social-instagram"></i></a>
+                            <a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a>
+                            <a href="https://twitter.com/?lang=en"><i class="icon ion-social-twitter"></i></a>
+                            <a href="https://www.snapchat.com/en-US"><i class="icon ion-social-snapchat"></i></a>
+                            <a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a>
                         </div>
                     </div>
                     <p class="copyright">FoodBank © 2023</p>
@@ -170,8 +173,7 @@
             </footer>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js">
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     </div>
 </body>
 

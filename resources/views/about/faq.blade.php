@@ -14,41 +14,38 @@
 
 <body style="margin-top: 5%">
     <main>
-        <h1 class="faq-heading">Frequently Asked Questions</h1>
+        <h1 class="faq-heading" style="font-size:50px"><b>Frequently Asked Questions</b></h1>
         <section class="faq-container">
             <div class="faq-one">
                 <!-- faq question -->
-                <h1 class="faq-page">What is an FAQ Page?</h1>
+                <h1 class="faq-page">How can I share my own recipe?</h1>
                 <!-- faq answer -->
                 <div class="faq-body">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit saepe sequi, illum facere
-                        necessitatibus cum aliquam id illo omnis maxime, totam soluta voluptate amet ut sit ipsum
-                        aperiam.
-                        Perspiciatis, porro!</p>
+                    <p>To be able to share your own recipe on the website, you might need to sign in to our website
+                        first. Next, press on the "create own recipe" button and fill in all the necessary recipe
+                        information. After submit the recipe, you will need to wait for the approval of the admins.
+                        And... DONE! Your recipe will be up on our website!</p>
                 </div>
             </div>
             <hr class="hr-line">
             <div class="faq-two">
                 <!-- faq question -->
-                <h1 class="faq-page">Why do you need an FAQ page?</h1>
+                <h1 class="faq-page">How do I report bugs?</h1>
                 <!-- faq answer -->
                 <div class="faq-body">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit saepe sequi, illum facere
-                        necessitatibus cum aliquam id illo omnis maxime, totam soluta voluptate amet ut sit ipsum
-                        aperiam.
-                        Perspiciatis, porro!</p>
+                    <p>You can report any existing bugs through our <a href="{{ route('feedback') }}">feedback form</a>,
+                        and also can tell us how you feel about our website there ^_^</p>
                 </div>
             </div>
             <hr class="hr-line">
             <div class="faq-three">
                 <!-- faq question -->
-                <h1 class="faq-page">Does it improves the user experience of a website?</h1>
+                <h1 class="faq-page">Can I save recipes so I can find them easily after?</h1>
                 <!-- faq answer -->
                 <div class="faq-body">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit saepe sequi, illum facere
-                        necessitatibus cum aliquam id illo omnis maxime, totam soluta voluptate amet ut sit ipsum
-                        aperiam.
-                        Perspiciatis, porro!</p>
+                    <p>Yes, you can save the recipes you like through clicking the love-shape button, and they will be
+                        save in the favourite page. You can found them in the favourite page after you login to your
+                        account.</p>
                 </div>
             </div>
         </section>

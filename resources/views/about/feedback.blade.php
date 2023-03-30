@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Tell us how we can improve: </label>
+                    <label for="exampleFormControlTextarea1">Tell us how we can improve / report bugs: </label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                 </div>
                 <button class="button">Submit</button>
