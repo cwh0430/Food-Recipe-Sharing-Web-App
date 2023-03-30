@@ -1,0 +1,27 @@
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {
+    display: inline;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    padding: 5px 10px;
+}
+
+ul.pagination li.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+ul.pagination li a {
+    color: #007bff;
+}
+
+ul.pagination li.disabled {
+    color: #999;
+    cursor: not-allowed;
+}
