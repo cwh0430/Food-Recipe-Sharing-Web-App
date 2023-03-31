@@ -11,7 +11,7 @@ class FavouriteController extends Controller
     public function favourites()
     {
         if (!auth()->check()) {
-            return redirect()->route('auth.login')->with('error', 'Please login to access this page.');
+            return redirect()->route('login')->with('error', 'Please login to access this page.');
         }
         $recipes = Recipe::whereHasFavorite(
             auth()->user()
@@ -24,7 +24,7 @@ class FavouriteController extends Controller
     {
         $recipe = Recipe::find($id);
         if (!auth()->check()) {
-            return redirect()->route('auth.login')->with('error', 'Please login to access this page.');
+            return redirect()->route('login')->with('error', 'Please login to access this page.');
         }
         $user = auth()->user();
         Favorite::add($recipe, $user);
@@ -37,7 +37,7 @@ class FavouriteController extends Controller
     {
         $recipe = Recipe::find($id);
         if (!auth()->check()) {
-            return redirect()->route('auth.login')->with('error', 'Please login to access this page.');
+            return redirect()->route('login')->with('error', 'Please login to access this page.');
         }
         $user = auth()->user();
         Favorite::remove($recipe, $user);
