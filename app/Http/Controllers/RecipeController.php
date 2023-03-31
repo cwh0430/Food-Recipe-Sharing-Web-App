@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Step;
 use App\Models\Recipe;
+use App\Models\Ingredient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
@@ -26,7 +28,7 @@ class RecipeController extends Controller
         $recipes = Recipe::all();
         return view('recipe.admin', ['recipes' => $recipes]);
     }
-    public function store()
+    public function showStore()
     {
         // $this->authorize('create', Recipe::class);
         if (Gate::denies('isAdmin')) {
@@ -34,6 +36,74 @@ class RecipeController extends Controller
             return redirect()->route('home');
         }
         return view('recipe.create');
+    }
+
+    public function store(Request $req)
+    {
+
+        $req->validate([
+            'name' => 'required|max:50|string',
+            'desc' => 'required',
+            'image' => 'required',
+            'steps' => 'array',
+            'steps.*' => 'required|string',
+            'ingredients' => 'required|array',
+            'ingredients.*' => 'required|string|max:100',
+            'unit' => 'array',
+            'unit.*' => 'required|string',
+            'quantity' => 'array',
+            'quantity.*' => 'required|string',
+            'additionalInfo' => 'array',
+        ]);
+
+        $recipe = Recipe::create(
+            [
+                'name' => $req->name,
+                'desc' => $req->desc,
+                'image' => $req->image,
+            ]
+
+        );
+
+
+
+        $units = $req->unit;
+        $quantity = $req->quantity;
+        $additionalInfo = $req->additionalInfo;
+
+        foreach ($req->ingredients as $index => $ingredient) {
+
+            $exist = Ingredient::where('name', $ingredient)->first();
+
+            if (!$exist) {
+                $newIng = Ingredient::create([
+                    'name' => $ingredient,
+                ]);
+
+                $recipe->getIngredients()->attach($newIng->id, [
+                    'unit' => $units[$index],
+                    'quantity' => $quantity[$index],
+                    'additionalInfo' => $additionalInfo[$index],
+                ]);
+            } else {
+                $recipe->getIngredients()->attach($exist->id, [
+                    'unit' => $units[$index],
+                    'quantity' => $quantity[$index],
+                    'additionalInfo' => $additionalInfo[$index],
+                ]);
+            }
+        }
+
+        foreach ($req->steps as $index => $step) {
+            Step::create([
+                'recipe_id' => $recipe->id,
+                'steps_num' => $index + 1,
+                'steps_desc' => $step,
+            ]);
+        }
+
+        session()->flash('msg', 'Added Successfully');
+        return redirect('/home');
     }
 
     public function edit()
