@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\RecipeController;
 
 /*
@@ -55,8 +56,12 @@ Route::get('/home', [RecipeController::class, 'index'])->name('home');
 
 //state what is this for?
 Route::get('/recipes', [RecipeController::class, 'recipes'])->name('recipes');
-Route::get('/favourites', [RecipeController::class, 'favourites'])->name('favourites');
 Route::get('/placeholder', [RecipeController::class, 'placeholder'])->name('placeholder');
+
+//favourites
+Route::get('/favourites', [FavouriteController::class, 'favourites'])->name('favourites');
+Route::post('favorite-add/{id}', [FavouriteController::class, 'favoriteAdd'])->name('favorite.add');
+Route::delete('favorite-remove/{id}', [FavouriteController::class, 'favoriteRemove'])->name('favorite.remove');
 
 //filter
 Route::get('/recipes/filter', [RecipeController::class, 'filter'])->name('recipes.filter');

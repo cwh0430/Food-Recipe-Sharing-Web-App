@@ -52,12 +52,6 @@ class RecipeController extends Controller
         return view('recipe.recipes', ['recipes' => $recipes]);
     }
 
-    public function favourites()
-    {
-        $recipes = Recipe::all();
-        return view('recipe.favourites', ['recipes' => $recipes]);
-    }
-
     public function filter(Request $request)
     {
         $filter = $request->get('filter');
@@ -80,9 +74,9 @@ class RecipeController extends Controller
         return view('recipe.index', ['recipes' => $recipes]);
     }
 
-// public function recommendations()
-// {
-//     $recommendedWords = ['dinner', 'lunch', 'vegetarian', 'desserts'];
-//     return view('recommendations', ('recommendedWords'));
-// }
+    // public function recommendations()
+    // {
+    //     $recommendedWords = ['dinner', 'lunch', 'vegetarian', 'desserts'];
+    //     return view('recommendations', ('recommendedWords'));
+    // }
 }

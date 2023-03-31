@@ -10,6 +10,9 @@ class FavouriteController extends Controller
 {
     public function favourites()
     {
+        if (!auth()->check()) {
+            return redirect()->route('auth.login')->with('error', 'Please login to access this page.');
+        }
         $recipes = Recipe::whereHasFavorite(
             auth()->user()
         )->get();
@@ -17,23 +20,29 @@ class FavouriteController extends Controller
         return view('recipe.favourites', compact('recipes'));
     }
 
-    // public function favouriteAdd($id)
-    // {
-    //     $recipe = Recipe::find($id);
-    //     $user = auth()->user();
-    //     Favorite::add($recipe, $user);
-    //     session()->flash('success', 'Recipe is Added to Favourite Successfully !');
+    public function favoriteAdd($id)
+    {
+        $recipe = Recipe::find($id);
+        if (!auth()->check()) {
+            return redirect()->route('auth.login')->with('error', 'Please login to access this page.');
+        }
+        $user = auth()->user();
+        Favorite::add($recipe, $user);
+        session()->flash('success', 'Recipe is Added to Favourite Successfully !');
 
-    //     return redirect()->route('favourites');
-    // }
+        return redirect()->route('recipe.favourites');
+    }
 
-    // public function favouriteRemove($id)
-    // {
-    //     $recipe = Recipe::find($id);
-    //     $user = auth()->user();
-    //     Favorite::remove($recipe, $user);
-    //     session()->flash('success', 'Recipe is Remove to Favourite Successfully !');
+    public function favoriteRemove($id)
+    {
+        $recipe = Recipe::find($id);
+        if (!auth()->check()) {
+            return redirect()->route('auth.login')->with('error', 'Please login to access this page.');
+        }
+        $user = auth()->user();
+        Favorite::remove($recipe, $user);
+        session()->flash('success', 'Recipe is Remove from Favourite Successfully !');
 
-    //     return redirect()->route('favourites');
-    // }
+        return redirect()->route('recipe.favourites');
+    }
 }
