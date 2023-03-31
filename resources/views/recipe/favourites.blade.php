@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Favorite Page</h1>
+        <h1>My Favourite</h1>
         @if (session('msg'))
             <div class="alert alert-danger" role="alert">
                 {{ session('msg') }}

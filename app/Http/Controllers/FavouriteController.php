@@ -30,7 +30,7 @@ class FavouriteController extends Controller
         Favorite::add($recipe, $user);
         session()->flash('success', 'Recipe is Added to Favourite Successfully !');
 
-        return redirect()->route('recipe.favourites');
+        return redirect()->route('favourites');
     }
 
     public function favoriteRemove($id)
@@ -43,6 +43,6 @@ class FavouriteController extends Controller
         Favorite::remove($recipe, $user);
         session()->flash('success', 'Recipe is Remove from Favourite Successfully !');
 
-        return redirect()->route('recipe.favourites');
+        return redirect()->route('favourites');
     }
 }
