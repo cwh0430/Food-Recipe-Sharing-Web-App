@@ -10,7 +10,7 @@ use Maize\Markable\Models\Favorite;
 
 class Recipe extends Model
 {
-    use HasFactory, Favorite;
+    use HasFactory, Markable;
 
     public function getIngredients()
     {
