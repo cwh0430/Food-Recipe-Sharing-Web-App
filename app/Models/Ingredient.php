@@ -10,6 +10,8 @@ class Ingredient extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name'];
+
     public function getRecipe()
     {
         return $this->belongsToMany(Recipe::class, 'recipe_ingredients', 'ingredient_id', 'recipe_id')->withPivot('quantity', 'unit', 'additionalInfo');
