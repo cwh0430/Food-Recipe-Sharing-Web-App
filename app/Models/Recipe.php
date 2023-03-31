@@ -5,10 +5,12 @@ namespace App\Models;
 use App\Models\Ingredient;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Maize\Markable\Markable;
+use Maize\Markable\Models\Favorite;
 
 class Recipe extends Model
 {
-    use HasFactory;
+    use HasFactory, Markable;
 
     protected $fillable = ['name', 'desc', 'image'];
 
@@ -21,4 +23,14 @@ class Recipe extends Model
     {
         return $this->hasMany(Step::class, 'recipe_id');
     }
+
+    protected $fillable = [
+        'name',
+        'desc',
+        'image',
+    ];
+
+    protected static $marks = [
+        Favorite::class,
+    ];
 }
