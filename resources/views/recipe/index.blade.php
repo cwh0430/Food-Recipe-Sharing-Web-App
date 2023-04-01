@@ -10,6 +10,12 @@
     </div>
     @endif
 
+    @can('isAdmin')
+    <div class="text-right">
+        <a class="btn btn-info" href="/manage">Manage Recipe</a>
+    </div>
+    @endcan
+
     <div class="button-container">
         <div class="col">
             <ul class="navbar-nav mr-auto">

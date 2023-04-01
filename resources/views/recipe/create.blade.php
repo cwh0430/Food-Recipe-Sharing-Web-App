@@ -16,17 +16,21 @@
     <form action="/create" method="POST">
       @csrf
 
+
+      {{-- Recipe Section title --}}
       <div class="text-center">
         <h1 style="margin-bottom:50px; ">New Recipe</h1>
       </div>
 
 
+      {{-- Recipe Name --}}
       <div class="form-group">
         <label for="name">Recipe Title</label>
         <input type="text" name="name" id="name" class="form-control" placeholder="Insert the Recipe Title" />
       </div>
 
 
+      {{-- Recipe Description --}}
       <div class="form-group">
         <label for="desc">Brief Description</label>
         <textarea name="desc" id="desc" class="form-control" placeholder="Brief Description of the Recipe"
@@ -34,6 +38,7 @@
       </div>
 
 
+      {{-- Recipe Image Url --}}
       <div class="form-group">
         <label for="image">Image URL</label>
         <input type="url" name="image" id="image" class="form-control" placeholder="Paste your Image url here">
@@ -42,10 +47,12 @@
 
       <hr style="border:1px solid #ccc; margin-top:70px; margin-bottom:70px;" title="Cooking Steps" />
 
+      {{-- Steps Title --}}
       <div class="text-center">
         <h1 style="margin-bottom:50px;">Cooking Steps</h1>
       </div>
 
+      {{-- Step Textbox --}}
       <div id="steps">
         <div class="step" style="margin-bottom: 30px;">
           <label for="step1">Step 1</label>
@@ -54,6 +61,7 @@
       </div>
 
 
+      {{-- Add More Step Button --}}
       <div class="text-center" style="margin-top:50px;">
         <input type="button" id="add-step" value="Add Another Step" class="btn btn-primary">
       </div>
@@ -62,28 +70,33 @@
       <hr style="border:1px solid #ccc; margin-top:70px; margin-bottom:70px;" />
 
 
+      {{-- Ingredient Title --}}
       <div class="text-center">
         <h1 style="margin-bottom:50px;">Ingredients Information</h1>
       </div>
 
+      {{-- Ingredient name --}}
       <div id="ingredients">
         <div class="form-group ingredient">
           <label for="ingredient1">Ingredient Name</label>
           <input type="text" name="ingredients[0]" id="ingredient0" class="form-control" placeholder="Ingredient Name">
         </div>
 
+        {{-- Ingredient Unit --}}
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="unit1">Unit</label>
             <input type="text" name="unit[0]" id="unit0" class="form-control" placeholder="unit">
           </div>
 
+          {{-- Ingredient Quantity --}}
           <div class="form-group col-md-6">
             <label for="quantity1">Quantity</label>
             <input type="text" name="quantity[0]" id="quantity0" class="form-control" placeholder="quantity">
           </div>
         </div>
 
+        {{-- Additional Info for Ingredient --}}
         <div class="form-group">
           <label for="additionalInfo1">Additional Information (optional)</label>
           <input type="text" name="additionalInfo[0]" id="additionalInfo0" class="form-control"
@@ -91,21 +104,7 @@
         </div>
       </div>
 
-
-      {{-- <div id="ingredients">
-        <div class="ingedient">
-          <label for="ingredient1">Ingredient</label>
-          <input type="text" name="ingredients[0]" id="ingredient0" placeholder="Ingredient Name">
-          <input type="text" name="unit[0]" id="unit0" placeholder="unit">
-          <input type="text" name="quantity[0]" id="quantity0" placeholder="quantity">
-          <input type="text" name="additionalInfo[0]" id="additionalInfo0"
-            placeholder="additional Information (optional)">
-
-
-
-        </div>
-      </div> --}}
-
+      {{-- Add More Ingredient Button --}}
       <div class="text-center" style="margin-top:50px;">
         <input type="button" id="add-ingredient" value="Add Another Ingredient" class="btn btn-primary">
       </div>
@@ -113,6 +112,7 @@
       <hr style="border:1px solid #ccc; margin-top:70px; margin-bottom:70px;" />
 
 
+      {{-- Create the Recipe Button --}}
       <div class="text-center" style="margin:30px 30px">
         <input type="submit" value="Create" class="btn btn-success btn-lg mt-6">
       </div>

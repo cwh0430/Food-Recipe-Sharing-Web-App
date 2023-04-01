@@ -65,8 +65,6 @@ class RecipeController extends Controller
 
         );
 
-
-
         $units = $req->unit;
         $quantity = $req->quantity;
         $additionalInfo = $req->additionalInfo;

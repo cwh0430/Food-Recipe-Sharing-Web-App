@@ -25,23 +25,6 @@ use App\Http\Controllers\RecipeController;
 // });
 
 Auth::routes();
-// //FOR NORMAL USERS
-// // Authentication routes
-// Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showUserLogin'])->name('login');
-// Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'userLogin']);
-// Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
-
-// // Registration routes
-// Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showUserRegister'])->name('register');
-// Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'userRegister']);
-
-// // Password reset routes
-// Route::get('/password/reset', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
-// Route::post('/password/email', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
-// Route::get('/password/reset/{token}', [App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'])->name('password.reset');
-// Route::post('/password/reset', [App\Http\Controllers\Auth\ResetPasswordController::class, 'reset']);
-
-
 
 //for all logout
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
