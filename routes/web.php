@@ -48,7 +48,7 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 //for admin page
-Route::get('/home/admin', [RecipeController::class, 'adminIndex'])->middleware('protectedPage');
+Route::get('/manage', [RecipeController::class, 'adminIndex'])->middleware('protectedPage');
 
 //for default home page and auth home page
 Route::get('/', [RecipeController::class, 'index']);
