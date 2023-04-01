@@ -25,7 +25,7 @@ class RecipeController extends Controller
 
     public function adminIndex()
     {
-        $recipes = Recipe::all();
+        $recipes = Recipe::orderBy('id', 'asc')->get();
         return view('recipe.admin', ['recipes' => $recipes]);
     }
     public function showStore()

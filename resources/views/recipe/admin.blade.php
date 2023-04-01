@@ -14,29 +14,17 @@
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Description</th>
-        <th>Image URL</th>
+        <th>Operations</th>
       </tr>
     </thead>
     <tbody>
+      @foreach ($recipes as $recipe)
       <tr>
-        <td>1</td>
-        <td>Product 1</td>
-        <td>Description 1</td>
-        <td><img src="https://example.com/image1.jpg" alt="Product 1" width="100"></td>
+        <td>{{$recipe->id}}</td>
+        <td>{{$recipe->name}}</td>
+        <td><a class="btn btn-warning" href="#">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
       </tr>
-      <tr>
-        <td>2</td>
-        <td>Product 2</td>
-        <td>Description 2</td>
-        <td><img src="https://example.com/image2.jpg" alt="Product 2" width="100"></td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Product 3</td>
-        <td>Description 3</td>
-        <td><img src="https://example.com/image3.jpg" alt="Product 3" width="100"></td>
-      </tr>
+      @endforeach
     </tbody>
   </table>
 </div>
