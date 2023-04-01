@@ -1,8 +1,6 @@
 const addStepButton = document.querySelector("#add-step");
 const stepsContainer = document.querySelector("#steps");
 
-const addStepButton = document.querySelector("#add-step");
-
 let stepCount = document.querySelectorAll(".step").length;
 
 addStepButton.addEventListener("click", () => {
