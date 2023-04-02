@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\RecipeController;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,7 +62,7 @@ Route::get('/faq', [AboutController::class, 'faq'])->name('faq');
 
 
 //for recipe policy (C Read detail UD)
-Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show');
+Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show')->middleware('auth');
 
-Route::get('/create', [RecipeController::class, 'showStore']);
+Route::get('/create', [RecipeController::class, 'showStore'])->middleware('protectedPage');
 Route::post('/create', [RecipeController::class, 'store']);

@@ -25,21 +25,18 @@ class RecipeController extends Controller
 
     public function adminIndex()
     {
-        $recipes = Recipe::orderBy('id', 'asc')->get();
+        $recipes = Recipe::orderBy('id', 'asc')->paginate(20);
         return view('recipe.admin', ['recipes' => $recipes]);
     }
     public function showStore()
     {
-        // $this->authorize('create', Recipe::class);
-        if (Gate::denies('isAdmin')) {
-            session()->flash('msg', 'You are unauthorized');
-            return redirect()->route('home');
-        }
         return view('recipe.create');
     }
 
     public function store(Request $req)
     {
+        $this->authorize('create', Recipe::class);
+
 
         $req->validate([
             'name' => 'required|max:50|string',
@@ -106,11 +103,15 @@ class RecipeController extends Controller
 
     public function edit()
     {
+        $this->authorize('create', Recipe::class);
+
         return view('recipe.edit');
     }
 
     public function destroy()
     {
+        $this->authorize('create', Recipe::class);
+
         return view('recipe.delete');
     }
 
