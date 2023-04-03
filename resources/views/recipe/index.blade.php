@@ -15,7 +15,7 @@
         <a class="btn btn-info" href="/manage">Manage Recipe</a>
     </div>
     @endcan
-
+    <link href="{{ asset('css/recommendB.css') }}" rel="stylesheet">
     <div class="button-container">
         <div class="col">
             <ul class="navbar-nav mr-auto">
@@ -106,37 +106,3 @@
 @endsection
 
 
-<style>
-    .my-button {
-        background-color: black;
-        border: none;
-        color: white;
-        padding: 5px 15px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-        margin: 10px 2px;
-        cursor: pointer;
-        width: 117px;
-        height: 50px;
-        border-radius: 5px;
-    }
-
-    .button-container {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        margin: 2px;
-    }
-
-    .col {
-        margin: 0px 1px;
-    }
-
-    .my-button:hover {
-        /* background-color: lightgrey; */
-        transform: scale(1.5);
-        transition: all .4s ease-in-out;
-    }
-</style>
