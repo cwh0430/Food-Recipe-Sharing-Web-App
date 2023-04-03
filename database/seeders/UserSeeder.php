@@ -37,6 +37,13 @@ class UserSeeder extends Seeder
                 'password' => '$2y$10$wJuY9wBBHxEaXYAxEzV9t./QTTQzod140dTPtdoBsGYa5N8DAOGwS',
 
             ],
+            [
+                'name' => "kenny",
+                'email' => "kenny@gmail.com",
+                'isAdmin' => 0,
+                'password' => '$2y$10$ppHrpGJyTe/kA0RbH.tjMOYg7ynJf7t0r4xRBNcUdSaoBW2C5K2DG',
+
+            ],
 
         ]);
     }
