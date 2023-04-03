@@ -20,7 +20,7 @@ $user = auth()->user();
                         <form action="{{ route('favorite.remove', $recipe->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" style="border-color:red; color:red"><a class="btn">Remove from
+                            <button style="border-color:red; color:red"><a class="btn">Remove from
                                     Favourites</a></button>
                         </form>
                     @else
