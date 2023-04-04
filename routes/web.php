@@ -50,8 +50,6 @@ Route::delete('favorite-remove/{id}', [FavouriteController::class, 'favoriteRemo
 //filter
 Route::get('/recipes/filter', [RecipeController::class, 'filter'])->name('recipes.filter');
 
-//recommendation
-Route::get('/recipes/recommendations', [RecipeController::class, 'recommendations'])->name('recommendations');
 
 
 //about and contact us

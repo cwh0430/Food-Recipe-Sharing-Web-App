@@ -51,6 +51,7 @@ $user = auth()->user();
                     @endforeach
                 </ol>
             </div>
+
             {{-- <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
@@ -65,7 +66,29 @@ $user = auth()->user();
                     </ul>
                 </div>
             </div>
+
         </div> --}}
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>To Explore More</h3>
+                </div>
+                @foreach($recommendedRecipes as $recommendedRecipe)
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <img src="{{ $recommendedRecipe->image }}" alt="{{ $recommendedRecipe->name }}" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $recommendedRecipe->name }}</h5>
+                                <a href="{{ route('recipes.show', $recommendedRecipe->id) }}" class="btn btn-primary">View Recipe</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </div>
+        
     </div>
+
+
 @endsection

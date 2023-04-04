@@ -8,6 +8,7 @@ use App\Models\Ingredient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
+
 class RecipeController extends Controller
 {
 
@@ -20,7 +21,14 @@ class RecipeController extends Controller
     public function show($id)
     {
         $recipe = Recipe::find($id);
-        return view('recipe.show', ['recipe' => $recipe]);
+
+        // Fetch recommended recipes
+        $recommendedRecipes = $this->getRecommendedRecipes($id);
+
+        return view('recipe.show', [
+            'recipe' => $recipe,
+            'recommendedRecipes' => $recommendedRecipes,
+        ]);
     }
 
     public function adminIndex()
@@ -150,4 +158,14 @@ class RecipeController extends Controller
     }
 
 
+    public function getRecommendedRecipes($id)
+    {
+        // Fetch recommended recipes
+        $recommendedRecipes = Recipe::where('id', '!=', $id)->inRandomOrder()->limit(6)->get();
+
+        return $recommendedRecipes;
+    }
+
+
+    
 }
