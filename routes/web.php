@@ -69,3 +69,6 @@ Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.sh
 
 //CRUD (U)
 Route::get('/edit/{id}', [RecipeController::class, 'showEdit']);
+
+//CRUD (D)
+Route::get('/delete/{id}', [RecipeController::class, 'destroy']);
