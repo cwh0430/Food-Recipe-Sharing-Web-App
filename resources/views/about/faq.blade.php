@@ -43,9 +43,9 @@
                 <h1 class="faq-page">Can I save recipes so I can find them easily after?</h1>
                 <!-- faq answer -->
                 <div class="faq-body">
-                    <p>Yes, you can save the recipes you like through clicking the love-shape button, and they will be
-                        save in the favourite page. You can found them in the favourite page after you login to your
-                        account.</p>
+                    <p>Yes, you can save the recipes you like through clicking the "Add to Favourites" button, and they
+                        will be save in the favourite page. You can found them in the favourite page after you login to
+                        your account.</p>
                 </div>
             </div>
         </section>
