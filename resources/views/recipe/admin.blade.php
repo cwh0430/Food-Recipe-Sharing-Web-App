@@ -25,7 +25,7 @@
         <td>
           <div class="column text-center">
             <a class="btn btn-success" href="/recipes/{{$recipe->id}}" style="margin-right:5px;">View</a>
-            <a class="btn btn-warning" href="#" style="margin-right:5px;">Edit</a>
+            <a class="btn btn-warning" href="/edit/{{$recipe->id}}" style="margin-right:5px;">Edit</a>
             <a class="btn btn-danger" href="#">Delete</a>
           </div>
         </td>

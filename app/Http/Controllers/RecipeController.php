@@ -101,6 +101,12 @@ class RecipeController extends Controller
         return redirect('/home');
     }
 
+    public function showEdit($id)
+    {
+        $recipe = Recipe::find($id);
+        return view('recipe.edit', ['recipe' => $recipe]);
+    }
+
     public function edit()
     {
         $this->authorize('create', Recipe::class);

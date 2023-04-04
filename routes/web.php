@@ -60,9 +60,12 @@ Route::get('/company', [AboutController::class, 'company'])->name('company');
 Route::get('/feedback', [AboutController::class, 'feedback'])->name('feedback');
 Route::get('/faq', [AboutController::class, 'faq'])->name('faq');
 
-
-//for recipe policy (C Read detail UD)
-Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show')->middleware('auth');
-
+//CRUD (C)
 Route::get('/create', [RecipeController::class, 'showStore'])->middleware('protectedPage');
 Route::post('/create', [RecipeController::class, 'store']);
+
+//CRUD (R)
+Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show')->middleware('auth');
+
+//CRUD (U)
+Route::get('/edit/{id}', [RecipeController::class, 'showEdit']);
