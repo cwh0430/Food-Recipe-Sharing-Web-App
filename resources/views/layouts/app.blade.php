@@ -76,10 +76,10 @@
                                 <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('recipes') }}">{{ __('Recipes') }}</a>
+                                <a class="nav-link" href="{{ route('favourites') }}">{{ __('Favourites') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('favourites') }}">{{ __('Favourites') }}</a>
+                                <a class="nav-link" href="{{ route('company') }}">{{ __('About us') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('placeholder') }}">{{ __('???') }}</a>
