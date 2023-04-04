@@ -21,6 +21,14 @@ class Recipe extends Model
         return $this->belongsToMany(Ingredient::class, 'recipe_ingredients', 'recipe_id', 'ingredient_id')->withPivot('quantity', 'unit', 'additionalInfo');
     }
 
+    protected static function booted()
+    {
+        static::deleting(function ($recipe) {
+            $recipe->getIngredients()->detach();
+            $recipe->getSteps()->delete();
+        });
+    }
+
     //one to many relationship
     public function getSteps()
     {

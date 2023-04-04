@@ -122,11 +122,15 @@ class RecipeController extends Controller
         return view('recipe.edit');
     }
 
-    public function destroy()
+    public function destroy($id)
     {
-        $this->authorize('create', Recipe::class);
+        $this->authorize('delete', Recipe::class);
 
-        return view('recipe.delete');
+        $recipe = Recipe::find($id);
+        $recipe->delete();
+
+        // return view('recipe.delete');
+        return redirect('/manage');
     }
 
     public function recipes()
