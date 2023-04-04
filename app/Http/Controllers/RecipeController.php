@@ -165,7 +165,7 @@ class RecipeController extends Controller
     public function getRecommendedRecipes($id)
     {
         // Fetch recommended recipes
-        $recommendedRecipes = Recipe::where('id', '!=', $id)->inRandomOrder()->limit(6)->get();
+        $recommendedRecipes = Recipe::where('id', '!=', $id)->inRandomOrder()->limit(3)->get();
 
         return $recommendedRecipes;
     }
