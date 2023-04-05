@@ -40,7 +40,7 @@ Route::get('/home', [RecipeController::class, 'index'])->name('home');
 
 //state what is this for?
 Route::get('/recipes', [RecipeController::class, 'recipes'])->name('recipes');
-Route::get('/placeholder', [RecipeController::class, 'placeholder'])->name('placeholder');
+Route::get('/ingredients', [RecipeController::class, 'ingredients'])->name('ingredients');
 
 //favourites
 Route::get('/favourites', [FavouriteController::class, 'favourites'])->name('favourites');
@@ -70,6 +70,3 @@ Route::get('/edit/{id}', [RecipeController::class, 'showEdit']);
 
 //CRUD (D)
 Route::get('/delete/{id}', [RecipeController::class, 'destroy']);
-
-//search
-Route::get('/search', [RecipeController::class, 'search'])->name('search');
