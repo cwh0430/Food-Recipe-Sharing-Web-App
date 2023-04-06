@@ -54,12 +54,16 @@
                 <h1 style="margin-bottom:50px;">Cooking Steps</h1>
             </div>
 
+
             {{-- Step Textbox --}}
             <div id="steps">
+                @foreach ($recipe->getSteps as $index => $step)
                 <div class="step" style="margin-bottom: 30px;">
-                    <label for="step1">Step 1</label>
-                    <input type="text" name="steps[]" id="step1" class="form-control">
+                    <label for="step1">Step {{$index + 1}}</label>
+                    <input type="text" name="steps[]" id="step{{$index+1}}" class="form-control"
+                        value="{{$step->steps_desc}}">
                 </div>
+                @endforeach
             </div>
 
 
