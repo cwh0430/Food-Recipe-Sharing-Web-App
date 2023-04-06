@@ -62,6 +62,10 @@
                     <label for="step1">Step {{$index + 1}}</label>
                     <input type="text" name="steps[]" id="step{{$index+1}}" class="form-control"
                         value="{{$step->steps_desc}}">
+                    @if ($index > 0)
+                    <input type="submit" class="remove-step-btn btn btn-danger" value="Remove"
+                        style="display:block; margin-right:0; margin-left:auto; margin-top:5px; margin-bottom:5px;">
+                    @endif
                 </div>
                 @endforeach
             </div>
@@ -83,54 +87,69 @@
 
             {{-- Ingredient name --}}
             <div id="ingredients">
+
+                @foreach ($recipe->getIngredients as $index => $ingredient)
+
                 <div class="form-group ingredient">
-                    <label for="ingredient1">Ingredient Name</label>
-                    <input type="text" name="ingredients[0]" id="ingredient0" class="form-control"
-                        placeholder="Ingredient Name">
-                </div>
+                    <label for="ingredient{{$index}}">Ingredient Name</label>
+                    <input type="text" name="ingredients[{{$index}}]" id="ingredient{{$index}}" class="form-control"
+                        placeholder="Ingredient Name" value="{{$ingredient->name}}">
 
-                {{-- Ingredient Unit --}}
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="unit1">Unit</label>
-                        <input type="text" name="unit[0]" id="unit0" class="form-control" placeholder="unit">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="unit{{$index}}">Unit</label>
+                            <input type="text" name="unit[{{$index}}]" id="unit{{$index}}" class="form-control"
+                                placeholder="unit" value="{{$ingredient->pivot->unit}}">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="quantity{{$index}}">Quantity</label>
+                            <input type="text" name="quantity[{{$index}}]" id="quantity{{$index}}" class="form-control"
+                                placeholder="quantity" value="{{$ingredient->pivot->quantity}}">
+                        </div>
                     </div>
 
-                    {{-- Ingredient Quantity --}}
-                    <div class="form-group col-md-6">
-                        <label for="quantity1">Quantity</label>
-                        <input type="text" name="quantity[0]" id="quantity0" class="form-control"
-                            placeholder="quantity">
+                    <div class="form-group">
+                        <label for="additionalInfo{{$index}}">Additional Information (optional)</label>
+                        <input type="text" name="additionalInfo[{{$index}}]" id="additionalInfo{{$index}}"
+                            class="form-control" placeholder="additional Information (optional)"
+                            value="{{$ingredient->pivot->additionalInfo}}">
                     </div>
+
+                    @if ($index > 0)
+                    <input type="submit" class="remove-ing-btn btn btn-danger" value="Remove"
+                        style="display:block; margin-right:0; margin-left:auto; margin-top:5px; margin-bottom:5px;">
+
+                    @endif
                 </div>
+                @endforeach
 
-                {{-- Additional Info for Ingredient --}}
-                <div class="form-group">
-                    <label for="additionalInfo1">Additional Information (optional)</label>
-                    <input type="text" name="additionalInfo[0]" id="additionalInfo0" class="form-control"
-                        placeholder="additional Information (optional)">
-                </div>
             </div>
 
-            {{-- Add More Ingredient Button --}}
-            <div class="text-center" style="margin-top:50px;">
-                <input type="button" id="add-ingredient" value="Add Another Ingredient" class="btn btn-primary">
-            </div>
-
-            <hr style="border:1px solid #ccc; margin-top:70px; margin-bottom:70px;" />
 
 
-            {{-- Create the Recipe Button --}}
-            <div class="text-center" style="margin:30px 30px">
-                <input type="submit" value="Create" class="btn btn-success btn-lg mt-6">
-            </div>
-        </form>
 
-        @if ($errors->any())
-        @foreach ($errors->all() as $error)
-        <p>{{$error}}</p>
-        @endforeach
-        @endif
+    </div>
+
+    {{-- Add More Ingredient Button --}}
+    <div class="text-center" style="margin-top:50px;">
+        <input type="button" id="add-ingredient" value="Add Another Ingredient" class="btn btn-primary">
+    </div>
+
+    <hr style="border:1px solid #ccc; margin-top:70px; margin-bottom:70px;" />
+
+
+    {{-- Update the Recipe Button --}}
+    <div class="text-center" style="margin:30px 30px">
+        <input type="submit" value="Update" class="btn btn-warning btn-lg mt-6">
+    </div>
+    </form>
+
+    @if ($errors->any())
+    @foreach ($errors->all() as $error)
+    <p>{{$error}}</p>
+    @endforeach
+    @endif
     </div>
 
 
