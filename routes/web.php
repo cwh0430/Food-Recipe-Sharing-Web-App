@@ -39,7 +39,6 @@ Route::get('/', [RecipeController::class, 'index']);
 Route::get('/home', [RecipeController::class, 'index'])->name('home');
 
 //state what is this for?
-Route::get('/recipes', [RecipeController::class, 'recipes'])->name('recipes');
 Route::get('/ingredients', [RecipeController::class, 'ingredients'])->name('ingredients');
 
 //favourites
