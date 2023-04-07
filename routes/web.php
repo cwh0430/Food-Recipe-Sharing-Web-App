@@ -63,7 +63,7 @@ Route::get('/create', [RecipeController::class, 'showStore'])->middleware('prote
 Route::post('/create', [RecipeController::class, 'store']);
 
 //CRUD (R)
-Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show')->middleware('auth');
+Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show');
 
 //CRUD (U)
 Route::get('/edit/{id}', [RecipeController::class, 'showEdit']);

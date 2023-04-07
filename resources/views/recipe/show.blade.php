@@ -15,21 +15,28 @@ $user = auth()->user();
                 <img src="{{ $recipe->image }}" alt="{{ $recipe->name }}" class="img-fluid mb-4">
 
                 <!-- favourite button -->
-                @auth
-                    @if (Favorite::has($recipe, $user))
-                        <form action="{{ route('favorite.remove', $recipe->id) }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            @method('DELETE')
-                            <button style="border-color:red; color:red"><a class="btn">Remove from
-                                    Favourites</a></button>
-                        </form>
-                    @else
-                        <form action="{{ route('favorite.add', $recipe->id) }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <button style="border-color:red; color:red"><a class="btn">Add to Favourites</a></button>
-                        </form>
-                    @endif
-                @endauth
+                @guest
+                    <form action="{{ route('favorite.add', $recipe->id) }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <button style="border-color:red; color:red"><a class="btn">Add to Favourites</a></button>
+                    </form>
+                @else
+                    @auth
+                        @if (Favorite::has($recipe, $user))
+                            <form action="{{ route('favorite.remove', $recipe->id) }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                @method('DELETE')
+                                <button style="border-color:red; color:red"><a class="btn">Remove from
+                                        Favourites</a></button>
+                            </form>
+                        @else
+                            <form action="{{ route('favorite.add', $recipe->id) }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <button style="border-color:red; color:red"><a class="btn">Add to Favourites</a></button>
+                            </form>
+                        @endif
+                    @endauth
+                @endguest
 
                 <p>{{ $recipe->description }}</p>
                 <h2>Ingredients:</h2>
@@ -69,15 +76,16 @@ $user = auth()->user();
 
         </div> --}}
 
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>To Explore More</h3>
-                </div>
-                @foreach($recommendedRecipes as $recommendedRecipe)
-                    <div class="col-sm-4 mb-3 ">
-                        <div class="card food">
-                            <img src="{{ $recommendedRecipe->image }}" alt="{{ $recommendedRecipe->name }}" class="card-img-top
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>To Explore More</h3>
+                    </div>
+                    @foreach ($recommendedRecipes as $recommendedRecipe)
+                        <div class="col-sm-4 mb-3 ">
+                            <div class="card food">
+                                <img src="{{ $recommendedRecipe->image }}" alt="{{ $recommendedRecipe->name }}"
+                                    class="card-img-top
                             
                             
                             
@@ -85,17 +93,16 @@ $user = auth()->user();
                             
                             
                             ">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $recommendedRecipe->name }}</h5>
-                                <a href="{{ route('recipes.show', $recommendedRecipe->id) }}" class="btn btn-primary">View Recipe</a>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $recommendedRecipe->name }}</h5>
+                                    <a href="{{ route('recipes.show', $recommendedRecipe->id) }}"
+                                        class="btn btn-primary">View Recipe</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
+
         </div>
-        
-    </div>
-
-
-@endsection
+    @endsection
