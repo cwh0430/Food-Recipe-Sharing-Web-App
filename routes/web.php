@@ -49,7 +49,9 @@ Route::delete('favorite-remove/{id}', [FavouriteController::class, 'favoriteRemo
 //filter
 Route::get('/recipes/filter', [RecipeController::class, 'filter'])->name('recipes.filter');
 
-
+//review and rating
+Route::get('/review/{id}', [ReviewController::class, 'showReview']);
+Route::post('/review/{id}', [ReviewController::class, 'review'])->name('review');
 
 //about and contact us
 Route::get('/team', [AboutController::class, 'team'])->name('team');
