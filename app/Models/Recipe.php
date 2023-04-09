@@ -34,6 +34,11 @@ class Recipe extends Model
     {
         return $this->hasMany(Step::class, 'recipe_id');
     }
+    
+    public function getReviews()
+    {
+        return $this->hasMany(Review::class, 'recipe_id');
+    }
 
 
     protected static $marks = [
