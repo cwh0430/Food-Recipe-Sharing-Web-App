@@ -105,8 +105,8 @@ class RecipeController extends Controller
             ]);
         }
 
-        session()->flash('msg', 'Added Successfully');
-        return redirect('/home');
+        session()->flash('success', 'Added Successfully');
+        return redirect('/manage');
     }
 
     public function showEdit($id)
@@ -170,8 +170,8 @@ class RecipeController extends Controller
             ]);
         }
 
-        session()->flash('msg', 'Updated Successfully');
-        return redirect('/home');
+        session()->flash('success', 'Updated Successfully');
+        return redirect('/manage');
 
 
 
@@ -184,6 +184,7 @@ class RecipeController extends Controller
         $recipe = Recipe::find($id);
         $recipe->delete();
 
+        session()->flash('success', 'Deleted Successfully');
         return redirect('/manage');
     }
 

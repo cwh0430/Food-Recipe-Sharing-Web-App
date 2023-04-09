@@ -10,6 +10,12 @@
     </div>
     @endif
 
+    @if (session('success'))
+    <div class="alert alert-success" role="alert">
+        {{ session('success') }}
+    </div>
+    @endif
+
     @can('isAdmin')
     <div class="text-right">
         <a class="btn btn-info" href="/manage">Manage Recipe</a>
@@ -104,5 +110,3 @@
 
 </div>
 @endsection
-
-

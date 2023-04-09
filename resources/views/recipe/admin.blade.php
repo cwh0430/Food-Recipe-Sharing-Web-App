@@ -4,6 +4,12 @@
 
 <div class="container">
 
+  @if (session('success'))
+  <div class="alert alert-success" role="alert">
+    {{ session('success') }}
+  </div>
+  @endif
+
 
   <div style="margin-bottom:20px;" class="text-right">
     <a class="btn btn-primary" href="/create">Add New Recipe</a>

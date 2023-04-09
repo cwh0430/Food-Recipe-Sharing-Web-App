@@ -22,10 +22,10 @@ class adminCheck
             return $next($request);
         }
 
-        // session()->flash('status', 'You are not authorized');
+        session()->flash('msg', 'You are not authorized');
 
         // dd(session('status'));
 
-        return redirect('/home')->with('msg', 'You are unauthorized');
+        return redirect('/home');
     }
 }

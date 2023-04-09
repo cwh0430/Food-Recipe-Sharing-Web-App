@@ -65,7 +65,7 @@ Route::post('/create', [RecipeController::class, 'store']);
 Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show');
 
 //CRUD (U)
-Route::get('/edit/{id}', [RecipeController::class, 'showEdit']);
+Route::get('/edit/{id}', [RecipeController::class, 'showEdit'])->middleware('protectedPage');
 Route::post('/edit/{id}', [RecipeController::class, 'edit']);
 
 //CRUD (D)
