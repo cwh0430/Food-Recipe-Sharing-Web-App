@@ -59,6 +59,20 @@ $user = auth()->user();
                 <li>{{ $step->steps_desc }}</li>
                 @endforeach
             </ol>
+            
+            <p></p>
+            <a style="text-decoration: none; font-size: 18px; color: red;" href="{{ route('review', $recipe->id) }}">
+                Rate and review this recipe to help us improve!
+            </a>
+
+            <p></p>
+            <h5>Reviews:</h5>
+            <ul style="list-style-type: none; margin: 0; padding: 0; border: 1px solid #ddd;">
+                @foreach ($recipe->getReviews as $review)
+                    <li style="padding: 8px 16px; border-bottom: 1px solid #ddd;"> {{ $review->star_rating }} ★ :  {{ $review->comments }}</li>
+                @endforeach
+            </ul>
+
         </div>
 
         {{-- <div class="col-md-4">
