@@ -48,7 +48,8 @@
         </script>
         <div style="padding:50px; width:60%; margin:0 auto;">
             <h1 style="text-align:center; font-weight:bold; font-size: 40px">Feedback</h1><br><br>
-            <form>
+            <form action="{{ route('home') }}" method="GET">
+                @csrf
                 <div class="form-group">
                     <label for="exampleFormControlInput1">First Name</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="First Name">
@@ -123,9 +124,18 @@
                     <label for="exampleFormControlTextarea1">Tell us how we can improve / report bugs: </label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                 </div>
-                <button class="button">Submit</button>
+                <button class="button" onclick="redirectToHome()">Submit</button>
             </form>
+            <script>
+                function redirectToHome() {
+                    alert("You have submitted the feedback form successfully!");
+                    setTimeout(function() {
+                        window.location.href = "{{ route('home') }}";
+                    }, 1000); // Redirect after 1 second (1000 milliseconds)
+                }
+            </script>
         </div>
+
 
     </body>
 @endsection
