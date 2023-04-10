@@ -81,8 +81,8 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('company') }}">{{ __('About us') }}</a>
                             </li>
-                            
-                            
+
+
                         </ul>
 
                         <!-- Right Side Of Navbar -->
@@ -151,7 +151,8 @@
                         </div>
                         <div class="col-md-6 item text">
                             <h3>FoodBank</h3>
-                            <p>Welcome to our food recipe website! We are dedicated to providing a vast collection of
+                            <p style="text-align: justify">Welcome to our food recipe website! We are dedicated to
+                                providing a vast collection of
                                 delicious and easy-to-follow recipes that are perfect for any occasion. Our website is a
                                 go-to resource for home cooks of all levels, offering a diverse range of recipes from
                                 around the world, including appetizers, main courses, desserts, and more. With our
@@ -172,7 +173,7 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-        
+
     </div>
 </body>
 
