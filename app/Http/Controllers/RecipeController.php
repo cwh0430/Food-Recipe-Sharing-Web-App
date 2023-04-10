@@ -172,9 +172,6 @@ class RecipeController extends Controller
 
         session()->flash('success', 'Updated Successfully');
         return redirect('/manage');
-
-
-
     }
 
     public function destroy($id)
@@ -200,16 +197,16 @@ class RecipeController extends Controller
 
         switch ($filter) {
             case 'latest':
-                $recipes = Recipe::latest()->paginate(10);
+                $recipes = Recipe::latest()->paginate(9);
                 break;
             case 'favorite':
-                $recipes = Recipe::orderBy('favorites', 'desc')->paginate(10);
+                $recipes = Recipe::orderBy('favorites', 'desc')->paginate(9);
                 break;
             case 'random':
-                $recipes = Recipe::inRandomOrder()->paginate(10);
+                $recipes = Recipe::inRandomOrder()->paginate(9);
                 break;
             default:
-                $recipes = Recipe::paginate(10);
+                $recipes = Recipe::paginate(9);
                 break;
         }
 
@@ -228,9 +225,8 @@ class RecipeController extends Controller
     public function search(Request $request)
     {
         $query = $request->input('query');
-        $recipes = Recipe::where('name', 'LIKE', '%' . $query . '%')->paginate(10);
+        $recipes = Recipe::where('name', 'LIKE', '%' . $query . '%')->paginate(9);
 
         return view('recipe.index', ['recipes' => $recipes]);
     }
-    
 }
