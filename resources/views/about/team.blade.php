@@ -93,8 +93,15 @@
 @section('content')
     <div class="about-section">
         <h1>About Our Team</h1>
-        <p>Some text about who we are and what we do.</p>
-        <p>Resize the browser window to see that this page is responsive by the way.</p>
+        <p style="text-align: justify">Our team working on FoodBank is a group of highly skilled and motivated individuals
+            with a passion for creating an exceptional user experience. The team consists of web developers, designers, and
+            content creators who work collaboratively to design, develop and maintain the website. Each member of the team
+            brings a unique set of skills and expertise to the project, allowing us to create a website that is not only
+            visually appealing but also functional and easy to use.</p>
+        <p style="text-align: justify">Our developers have a deep understanding of web technologies and programming languages
+            such as PHP, JavaScript, and CSS, allowing them to build a robust and scalable web application. They work
+            closely with our designers to ensure that the website's user interface and user experience are optimized for
+            maximum usability.</p>
     </div>
     <br><br><br>
     <h2 style="text-align:center">Our Team Members</h2>
@@ -106,8 +113,9 @@
                         alt="Hu Tao">
                     <h2>Hu Tao</h2>
                     <p class="title">CEO & Founder</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>hutao@foodbank.com</p><br><br>
+                    <p>Hu Tao's antics and eccentricity belies her role as the 77th Director of the FoodBank and her talent
+                        as a poet.</p>
+                    <p><b>hutao@foodbank.com</b></p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -120,8 +128,8 @@
                         alt="Zhongli">
                     <h2>Zhong Li</h2>
                     <p class="title">Assistance</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>zhongli@foodbank.com</p><br><br>
+                    <p>A consultant of the FoodBank, he is later revealed to be the billionaire.</p>
+                    <p><b>zhongli@foodbank.com</b></p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -133,8 +141,9 @@
                     <img src="https://i.pinimg.com/736x/aa/32/6a/aa326aa917ea8e66d904a89f4d0a4b3a.jpg" alt="Yoimiya">
                     <h2>Naganohara Yoimiya</h2>
                     <p class="title">Designer</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>yoimiya@foodbank.com</p><br><br>
+                    <p>She was coined as the "Queen of the Summer Festival," as they believe summer is not the same without
+                        her. The best girl!</p>
+                    <p><b>yoimiya@foodbank.com</b></p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -147,8 +156,9 @@
                         alt="Raiden">
                     <h2>Raiden Shogun</h2>
                     <p class="title">Discipline Manager</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>raiden@foodbank.com</p><br><br>
+                    <p>With the might of lightning at her disposal, she commits herself to the solitary pursuit of eternity.
+                    </p>
+                    <p><b>raiden@foodbank.com</b></p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
@@ -160,8 +170,9 @@
                     <img src="https://i.pinimg.com/originals/bb/e6/6c/bbe66ccdca956f081f2d0750a44b6172.jpg" alt="Itto">
                     <h2>Arataki Itto</h2>
                     <p class="title">Entertainment Manager</p>
-                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                    <p>itto@foodbank.com</p><br><br>
+                    <p>Fast as the wind and mighty as thunder, he is an intrepid man with Oni blood running through his
+                        veins.</p>
+                    <p><b>itto@foodbank.com</b></p><br><br>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
