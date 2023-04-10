@@ -82,12 +82,7 @@
                                 <a class="nav-link" href="{{ route('company') }}">{{ __('About us') }}</a>
                             </li>
                             
-                            <li class="nav-item">
-                                <form action="{{ route('search') }}" method="GET" class="d-flex">
-                                    <input type="search" name="query" class="form-control " placeholder="Search for food" aria-label="Search for food">
-                                    <button type="submit" class="btn btn-outline-secondary ms-2">Search</button>
-                                </form>
-                            </li>
+                            
                         </ul>
 
                         <!-- Right Side Of Navbar -->
