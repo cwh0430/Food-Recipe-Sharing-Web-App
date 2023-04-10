@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    
+
 
     <!-- footer CSS -->
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
@@ -76,15 +76,18 @@
                                 <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('ingredients') }}">{{ __('Ingredients') }}</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('favourites') }}">{{ __('Favourites') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('company') }}">{{ __('About us') }}</a>
                             </li>
                             
+                            <li class="nav-item">
+                                <form action="{{ route('search') }}" method="GET" class="d-flex">
+                                    <input type="search" name="query" class="form-control " placeholder="Search for food" aria-label="Search for food">
+                                    <button type="submit" class="btn btn-outline-secondary ms-2">Search</button>
+                                </form>
+                            </li>
                         </ul>
 
                         <!-- Right Side Of Navbar -->

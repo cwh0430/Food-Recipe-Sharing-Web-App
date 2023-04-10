@@ -105,8 +105,8 @@ class RecipeController extends Controller
             ]);
         }
 
-        session()->flash('msg', 'Added Successfully');
-        return redirect('/home');
+        session()->flash('success', 'Added Successfully');
+        return redirect('/manage');
     }
 
     public function showEdit($id)
@@ -115,11 +115,66 @@ class RecipeController extends Controller
         return view('recipe.edit', ['recipe' => $recipe]);
     }
 
-    public function edit()
+    public function edit(Request $req, $id)
     {
-        $this->authorize('create', Recipe::class);
+        $this->authorize('update', Recipe::class);
 
-        return view('recipe.edit');
+        $req->validate([
+            'name' => 'required|max:50|string',
+            'desc' => 'required',
+            'image' => 'required',
+            'steps' => 'array',
+            'steps.*' => 'required|string',
+            'ingredients' => 'required|array',
+            'ingredients.*' => 'required|string|max:100',
+            'unit' => 'array',
+            'unit.*' => 'required|string',
+            'quantity' => 'array',
+            'quantity.*' => 'required|string',
+            'additionalInfo' => 'array',
+        ]);
+
+        $recipe = Recipe::find($id);
+
+        $recipe->update([
+            'name' => $req->name,
+            'desc' => $req->desc,
+            'image' => $req->image,
+        ]);
+
+        $recipe->getIngredients()->sync([]);
+        foreach ($req->ingredients as $index => $ingredient) {
+            $exist = Ingredient::where('name', $ingredient)->first();
+            if (!$exist) {
+                $newIng = Ingredient::create(['name' => $ingredient]);
+                $recipe->getIngredients()->attach($newIng->id, [
+                    'unit' => $req->unit[$index],
+                    'quantity' => $req->quantity[$index],
+                    'additionalInfo' => $req->additionalInfo[$index],
+                ]);
+            } else {
+                $recipe->getIngredients()->attach($exist->id, [
+                    'unit' => $req->unit[$index],
+                    'quantity' => $req->quantity[$index],
+                    'additionalInfo' => $req->additionalInfo[$index],
+                ]);
+            }
+        }
+
+        $recipe->getSteps()->delete();
+        foreach ($req->steps as $index => $step) {
+            Step::create([
+                'recipe_id' => $recipe->id,
+                'steps_num' => $index + 1,
+                'steps_desc' => $step,
+            ]);
+        }
+
+        session()->flash('success', 'Updated Successfully');
+        return redirect('/manage');
+
+
+
     }
 
     public function destroy($id)
@@ -129,7 +184,7 @@ class RecipeController extends Controller
         $recipe = Recipe::find($id);
         $recipe->delete();
 
-        // return view('recipe.delete');
+        session()->flash('success', 'Deleted Successfully');
         return redirect('/manage');
     }
 
@@ -179,13 +234,11 @@ class RecipeController extends Controller
     //     return view('recipe.index', ['recipes' => $recipes]);
     // }
     public function search(Request $request)
-    {
-        $query = $request->input('query');
+{
+    $query = $request->input('query');
+    $recipes = Recipe::where('name', 'LIKE', '%' . $query . '%')->paginate(10);
 
-        $recipes = Recipe::where('name', 'LIKE', '%' . $query . '%')->get();
-
-        return response()->json($recipes);
-    }
-
+    return view('recipe.index', ['recipes' => $recipes]);
+}
     
 }

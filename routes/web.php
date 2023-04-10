@@ -39,7 +39,6 @@ Route::get('/', [RecipeController::class, 'index']);
 Route::get('/home', [RecipeController::class, 'index'])->name('home');
 
 //state what is this for?
-Route::get('/recipes', [RecipeController::class, 'recipes'])->name('recipes');
 Route::get('/ingredients', [RecipeController::class, 'ingredients'])->name('ingredients');
 
 //favourites
@@ -50,7 +49,9 @@ Route::delete('favorite-remove/{id}', [FavouriteController::class, 'favoriteRemo
 //filter
 Route::get('/recipes/filter', [RecipeController::class, 'filter'])->name('recipes.filter');
 
-
+//review and rating
+Route::get('/review/{id}', [ReviewController::class, 'showReview']);
+Route::post('/review/{id}', [ReviewController::class, 'review'])->name('review');
 
 //about and contact us
 Route::get('/team', [AboutController::class, 'team'])->name('team');
@@ -63,16 +64,11 @@ Route::get('/create', [RecipeController::class, 'showStore'])->middleware('prote
 Route::post('/create', [RecipeController::class, 'store']);
 
 //CRUD (R)
-Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show')->middleware('auth');
+Route::get('/recipes/{id}', [RecipeController::class, 'show'])->name('recipes.show');
 
 //CRUD (U)
-Route::get('/edit/{id}', [RecipeController::class, 'showEdit']);
+Route::get('/edit/{id}', [RecipeController::class, 'showEdit'])->middleware('protectedPage');
+Route::post('/edit/{id}', [RecipeController::class, 'edit']);
 
 //CRUD (D)
 Route::get('/delete/{id}', [RecipeController::class, 'destroy']);
-
-//SEARCH
-Route::get('/search', [RecipeController::class, 'search'])->name('search');
-
-
-
