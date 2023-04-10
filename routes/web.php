@@ -72,3 +72,6 @@ Route::post('/edit/{id}', [RecipeController::class, 'edit']);
 
 //CRUD (D)
 Route::get('/delete/{id}', [RecipeController::class, 'destroy']);
+
+//search
+Route::get('/search', [RecipeController::class, 'search'])->name('search');

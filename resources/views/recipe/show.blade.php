@@ -97,19 +97,23 @@ $user = auth()->user();
                 <div class="col-md-12">
                     <h3>To Explore More</h3>
                 </div>
-                @foreach ($recommendedRecipes as $recommendedRecipe)
-                <div class="col-sm-4 mb-3 ">
-                    <div class="card food">
-                        <img src="{{ $recommendedRecipe->image }}" alt="{{ $recommendedRecipe->name }}"
-                            class="card-img-top" style="width: 100%; height:
-                        200px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $recommendedRecipe->name }}</h5>
-                            <a href="{{ route('recipes.show', $recommendedRecipe->id) }}" class="btn btn-primary">View
-                                Recipe</a>
+                @foreach($recommendedRecipes as $recommendedRecipe)
+                    <div class="col-sm-4 mb-3 ">
+                        <div class="card food">
+                            <img src="{{ $recommendedRecipe->image }}" alt="{{ $recommendedRecipe->name }}" class="card-img-top
+                            
+                            
+                            
+                            
+                            
+                            
+                            ">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $recommendedRecipe->name }}</h5>
+                                <a href="{{ route('recipes.show', $recommendedRecipe->id) }}" class="btn btn-primary">View Recipe</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>

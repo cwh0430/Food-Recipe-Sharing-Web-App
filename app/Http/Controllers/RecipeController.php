@@ -225,7 +225,6 @@ class RecipeController extends Controller
         return $recommendedRecipes;
     }
 
-
     public function search(Request $request)
     {
         $query = $request->input('query');
@@ -233,5 +232,5 @@ class RecipeController extends Controller
 
         return view('recipe.index', ['recipes' => $recipes]);
     }
-
+    
 }

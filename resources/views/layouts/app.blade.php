@@ -81,14 +81,8 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('company') }}">{{ __('About us') }}</a>
                             </li>
-
-                            {{-- <li class="nav-item">
-                                <form action="{{ route('search') }}" method="GET" class="d-flex">
-                                    <input type="search" name="query" class="form-control "
-                                        placeholder="Search for food" aria-label="Search for food">
-                                    <button type="submit" class="btn btn-outline-secondary ms-2">Search</button>
-                                </form>
-                            </li> --}}
+                            
+                            
                         </ul>
 
                         <!-- Right Side Of Navbar -->
@@ -178,6 +172,7 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        
     </div>
 </body>
 
