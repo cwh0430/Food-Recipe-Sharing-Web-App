@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\ReviewController;
 use GuzzleHttp\Middleware;
 
 /*
