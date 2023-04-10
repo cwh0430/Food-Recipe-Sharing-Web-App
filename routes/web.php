@@ -70,3 +70,9 @@ Route::get('/edit/{id}', [RecipeController::class, 'showEdit']);
 
 //CRUD (D)
 Route::get('/delete/{id}', [RecipeController::class, 'destroy']);
+
+//SEARCH
+Route::get('/search', [RecipeController::class, 'search'])->name('search');
+
+
+

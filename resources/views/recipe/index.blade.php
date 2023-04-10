@@ -32,49 +32,17 @@
                 </li>
             </ul>
         </div>
-        <div class="col">
-            <form action="{{ route('home') }}">
-                @csrf
-                <button type="submit" class="my-button">Lunch</button>
+        <div class="col2">
+            <form action="{{ route('search') }}" method="GET" class="d-flex">
+                <input type="search" name="query" class="form-control " placeholder="Search for food" aria-label="Search for food">
+                <button type="submit" class="btn btn-outline-secondary ms-2">Search</button>
             </form>
+            <div class="search-results-container d-none">
+                <ul class="list-group search-results-list">
+                </ul>
+            </div>
         </div>
-        <div class="col">
-            <form action="{{ route('home') }}">
-                @csrf
-                <button type="submit" class="my-button">BREAKFAST</button>
-            </form>
-        </div>
-        <div class="col">
-            <form action="{{ route('home') }}">
-                @csrf
-                <button type="submit" class="my-button">VEGE</button>
-            </form>
-        </div>
-
-        <div class="col">
-            <form action="{{ route('home') }}">
-                @csrf
-                <button type="submit" class="my-button">DINNER</button>
-            </form>
-        </div>
-        <div class="col">
-            <form action="{{ route('home') }}">
-                @csrf
-                <button type="submit" class="my-button">DESSERTS</button>
-            </form>
-        </div>
-        <div class="col">
-            <form action="{{ route('home') }}">
-                @csrf
-                <button type="submit" class="my-button">BREAD</button>
-            </form>
-        </div>
-        <div class="col">
-            <form action="{{ route('home') }}">
-                @csrf
-                <button type="submit" class="my-button">WAFFLE</button>
-            </form>
-        </div>
+        
     </div>
     <div class="row">
 
@@ -91,7 +59,6 @@
             </a>
         </div>
 
-
         @endforeach
     </div>
 
@@ -100,9 +67,59 @@
         $recipes->appends(request()->except('page')),
         'class' => 'my-4']) }}
     </div>
-
-
 </div>
+
+
+<script>
+    $(document).ready(function () {
+        $("input[name='query']").on('keyup', function () {
+            var query = $(this).val();
+
+            if (query.length > 2) {
+                $.ajax({
+                    url: "{{ route('search') }}",
+                    data: {
+                        query: query,
+                        _token: "{{ csrf_token() }}"
+                    },
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function (response) {
+                        $('.search-results-container').removeClass('d-none');
+                        var resultHtml = '';
+
+                        if (response && response.length > 0) {
+                            response.forEach(function (recipe) {
+                                resultHtml += `
+                                <li class="list-group-item">
+                                    <a href="/recipes/${recipe.id}">${recipe.name}</a>
+                                </li>`;
+                            });
+                        } else {
+                            resultHtml = '<li class="list-group-item">No results found.</li>';
+                        }
+
+                        $('.search-results-list').html(resultHtml);
+                    },
+                    error: function () {
+                        $('.search-results-container').addClass('d-none');
+                    }
+                });
+            } else {
+                $('.search-results-container').addClass('d-none');
+            }
+        });
+
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.search-results-container').length && !$(e.target).closest('.col2').length) {
+                $('.search-results-container').addClass('d-none');
+            }
+        });
+    });
+</script>
+
+
+
 @endsection
 
 

@@ -171,12 +171,21 @@ class RecipeController extends Controller
     }
 
 
-    public function search(Request $request)
-{
-    $query = $request->input('query');
-    $recipes = Recipe::where('name', 'LIKE', '%' . $query . '%')->paginate(10);
+    // public function search(Request $request)
+    // {
+    //     $query = $request->input('query');
+    //     $recipes = Recipe::where('name', 'LIKE', '%' . $query . '%')->paginate(10);
 
-    return view('recipe.index', ['recipes' => $recipes]);
-}
+    //     return view('recipe.index', ['recipes' => $recipes]);
+    // }
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $recipes = Recipe::where('name', 'LIKE', '%' . $query . '%')->get();
+
+        return response()->json($recipes);
+    }
+
     
 }
