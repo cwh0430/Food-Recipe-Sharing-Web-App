@@ -1,14 +1,15 @@
 <?php
 
-use App\Http\Controllers\AboutController;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\FavouriteController;
-use App\Http\Controllers\RecipeController;
-use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------

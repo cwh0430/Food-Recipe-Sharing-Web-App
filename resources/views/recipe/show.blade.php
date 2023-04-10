@@ -59,7 +59,7 @@ $user = auth()->user();
                 <li>{{ $step->steps_desc }}</li>
                 @endforeach
             </ol>
-            
+
             <p></p>
             <a style="text-decoration: none; font-size: 18px; color: red;" href="{{ route('review', $recipe->id) }}">
                 Rate and review this recipe to help us improve!
@@ -69,7 +69,8 @@ $user = auth()->user();
             <h5>Reviews:</h5>
             <ul style="list-style-type: none; margin: 0; padding: 0; border: 1px solid #ddd;">
                 @foreach ($recipe->getReviews as $review)
-                    <li style="padding: 8px 16px; border-bottom: 1px solid #ddd;"> {{ $review->star_rating }} ★ :  {{ $review->comments }}</li>
+                <li style="padding: 8px 16px; border-bottom: 1px solid #ddd;"> {{ $review->star_rating }} ★ : {{
+                    $review->comments }}</li>
                 @endforeach
             </ul>
 
@@ -98,22 +99,18 @@ $user = auth()->user();
                     <h3>To Explore More</h3>
                 </div>
                 @foreach($recommendedRecipes as $recommendedRecipe)
-                    <div class="col-sm-4 mb-3 ">
-                        <div class="card food">
-                            <img src="{{ $recommendedRecipe->image }}" alt="{{ $recommendedRecipe->name }}" class="card-img-top
-                            
-                            
-                            
-                            
-                            
-                            
-                            ">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ $recommendedRecipe->name }}</h5>
-                                <a href="{{ route('recipes.show', $recommendedRecipe->id) }}" class="btn btn-primary">View Recipe</a>
-                            </div>
+                <div class="col-sm-4 mb-3 ">
+                    <div class="card food">
+                        <img src="{{ $recommendedRecipe->image }}" alt="{{ $recommendedRecipe->name }}"
+                            class="card-img-top" style="width: 100%; height:
+                            200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $recommendedRecipe->name }}</h5>
+                            <a href="{{ route('recipes.show', $recommendedRecipe->id) }}" class="btn btn-primary">View
+                                Recipe</a>
                         </div>
                     </div>
+                </div>
                 @endforeach
             </div>
         </div>
