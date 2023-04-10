@@ -33,7 +33,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col2" style="flex: 12">
+            <div class="col2" style="flex: 20">
                 <form action="{{ route('search') }}" method="GET" class="d-flex">
                     <input type="search" name="query" class="form-control " placeholder="Search for food"
                         aria-label="Search for food">
