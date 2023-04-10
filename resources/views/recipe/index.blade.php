@@ -15,14 +15,9 @@
             </div>
         @endif
 
-        @can('isAdmin')
-            <div class="text-right">
-                <a class="btn btn-info" href="/manage">Manage Recipe</a>
-            </div>
-        @endcan
         <link href="{{ asset('css/recommendB.css') }}" rel="stylesheet">
-        <div class="button-container">
-            <div class="col">
+        <div class="button-container" style="width: 100%">
+            <div class="col2" style="flex: 1">
                 <ul class="navbar-nav mr-auto">
                     <div class="dropdown-divider"></div>
                     <li class="nav-item dropdown">
@@ -38,7 +33,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col2">
+            <div class="col2" style="flex: 12">
                 <form action="{{ route('search') }}" method="GET" class="d-flex">
                     <input type="search" name="query" class="form-control " placeholder="Search for food"
                         aria-label="Search for food">
@@ -48,7 +43,13 @@
                     <ul class="list-group search-results-list">
                     </ul>
                 </div>
-            </div><br><br><br>
+            </div>
+            @can('isAdmin')
+                <div class="text-right" style="flex: 4">
+                    <a class="btn btn-info" href="/manage">Manage Recipe</a>
+                </div>
+            @endcan
+            <br><br><br>
 
         </div>
         <div class="row">
