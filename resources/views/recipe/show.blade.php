@@ -55,7 +55,7 @@ $user = auth()->user();
             </ul>
             <h2>Steps:</h2>
             <ol>
-                @foreach ($recipe->getSteps as $step)
+                @foreach ($recipe->getSteps()->orderBy('steps_num')->get() as $step)
                 <li>{{ $step->steps_desc }}</li>
                 @endforeach
             </ol>
@@ -67,6 +67,7 @@ $user = auth()->user();
 
             <p></p>
             <h5>Reviews:</h5>
+
             <ul style="list-style-type: none; margin: 0; padding: 0; border: 1px solid #ddd;">
                 @foreach ($recipe->getReviews as $review)
                 <li style="padding: 8px 16px; border-bottom: 1px solid #ddd;"> {{ $review->star_rating }} ★ : {{
@@ -74,24 +75,11 @@ $user = auth()->user();
                 @endforeach
             </ul>
 
+            @if (!($recipe->getReview))
+            <h6 style="margin-top:15px;">No Rating Available</h6>
+            @endif
+
         </div>
-
-        {{-- <div class="col-md-4">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Related Recipes</h3>
-                </div>
-                <div class="card-body">
-                    <ul>
-                        @foreach ($relatedRecipes as $relatedRecipe)
-                        <li><a href="{{ route('recipes.show', $relatedRecipe->id) }}">{{ $relatedRecipe->name }}</a>
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-
-        </div> --}}
 
         <div class="container mt-4">
             <div class="row">
