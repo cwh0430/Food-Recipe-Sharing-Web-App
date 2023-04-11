@@ -37,7 +37,7 @@
                 <form action="{{ route('search') }}" method="GET" class="d-flex">
                     <input type="search" name="query" class="form-control " placeholder="Search for food"
                         aria-label="Search for food">
-                    <button type="submit" class="btn btn-outline-secondary ms-2">Search</button>
+                    <button type="submit" class="btn btn-outline-secondary ms-2" style="background-color:black; color:white;" onmouseover="this.style.backgroundColor='grey';" onmouseout="this.style.backgroundColor='black';">Search</button>
                 </form>
                 <div class="search-results-container d-none">
                     <ul class="list-group search-results-list">
