@@ -116,6 +116,156 @@ class RecipeSeeder extends Seeder
                 'desc' => "Delicious seafood Alfredo recipe with a creamy Parmesan sauce, shrimp, scallops, and fettuccine pasta.",
                 'image' => "https://www.allrecipes.com/thmb/n-4yqPxCVjpykc8R_pri2TalJD8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1000718-seafood-fettuccine-Eddie-Stroud-4x3-1-461e8bcf296f4c5ebab1647816c82907.jpg"
             ],
+            [
+                'name' => "Juicy Roasted Chicken",
+                'desc' => "This roasted chicken recipe is the way my grandmother used to make it. This method results in the juiciest chicken! We loved to nibble on the celery after it was cooked.",
+                'image' => "https://www.allrecipes.com/thmb/ZNARl52mibyF1XHwwIb5A1czmkY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/83557-juicy-roast-chicken-mfs495-1-3d0f1e3e54104d43b24d4b480d2839ba.jpg"
+            ],
+            [
+                'name' => "Slow Cooker Texas Pulled Pork",
+                'desc' => "This Texas-style pulled pork recipe has a tangy barbeque sauce that's easy to make in the slow cooker. I like to serve the shredded pork on toasted buttered rolls. My family's favorite!",
+                'image' => "https://www.allrecipes.com/thmb/O7mGZDBSo5uQTeCRNOYOdWxxB7c=/282x188/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/92462_Slow-Cooker-Texas-Pulled-Pork_psychedilemma_4560053_original-1x1-1-e3c3aa5d5a10431b8b5cb589174c0060.jpg"
+            ],
+            [
+                'name' => "Mom's Fabulous Chicken Pot Pie with Biscuit Crust",
+                'desc' => "This chicken pot pie with biscuits is easy to make with leftover chicken or rotisserie chicken from the supermarket for a cozy, comforting dinner. It's full of fresh vegetables for added flavor but you can use frozen vegetables for even quicker prep.",
+                'image' => "https://www.allrecipes.com/thmb/TNcxINTRtx1TihK07snP75RCYlY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/216758_MomsFabulousChickenPotPiewithBiscuitCrustRecipe_mfs_12760-7e1c79a8db8e4cf3bd761d341df23553.jpg"
+            ],
+            [
+                'name' => "Easy Meatloaf",
+                'desc' => "This meatloaf recipe doesn't take long to make at all, and it's very good!",
+                'image' => "https://www.allrecipes.com/thmb/9-R0x6fa6CAWu7fxXVhCWuAbVqs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/16354-easy-meatloaf-mfs-74-3d9368335f824e31ab2564932cc26fa3.jpg"
+            ],
+            [
+                'name' => "Slow-Cooker Corned Beef and Cabbage",
+                'desc' => "Cook this corned beef in a crock pot all day, and you're guaranteed success — no more dry corned beef! Serve with soda bread for a warm and satisfying meal.",
+                'image' => "https://www.allrecipes.com/thmb/E8XCGciJUttm5eefyZMi6FT9KSw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/2152835-422dbdf413094ce19c4bbe862a7f2414.jpg"
+            ],
+            [
+                'name' => "Korean Ground Beef Bowl",
+                'desc' => "This Korean beef bowl is quick and easy to make. The ingredients can easily be adjusted to suit your taste. Serve over warm rice or spiralized vegetables.",
+                'image' => "https://www.allrecipes.com/thmb/4PIcvZvGnfgoJvVoQW7lXoLWbG8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/5759837-b2371603be79499c9e1cfa7eeefc7b25.jpg"
+            ],
+            [
+                'name' => "Honey Glazed Chicken",
+                'desc' => "This honey chicken recipe was given to me by a friend. I've used this recipe for years, and my family requests it often. It's a light meal that everyone will enjoy. Serve with steamed rice.",
+                'image' => "https://www.allrecipes.com/thmb/AhQLcq-BHeoRO4EGdnw941Z_w0A=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/231939_Honey-Glazed-Chicken_Adam-Vaccarezza_4564886_original-4x3-1-acb1de801b6541b69e06bf7b731c1b60.jpg"
+            ],
+            [
+                'name' => "Wonderful Fried Fish Tacos",
+                'desc' => "Fish tacos are a taste of pure textural wizardry -- the tender bite of fish, the crispy crunch of cabbage, and the kick of creamy white sauce will put a spell on you. One bite and you're hooked. Lucky for you, we've got a world of fish taco recipes to explore! Grilled fish tacos, baked fish tacos, blackened fish tacos, and fried fish tacos. We have salmon tacos, halibut tacos, shrimp tacos, cod tacos, and tilapia tacos. These top-rated tacos are just some of our very favorite fish taco recipes. Enjoy them on warm corn tortillas topped with all the fixings. And don't forget the fresh limes!",
+                'image' => "https://www.allrecipes.com/thmb/-uonZRoBLJIJEVkQbJi1aBRLXK4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1456535_Wonderful-Fried-Fish-Tacos_12759_Photo-by-bd.weld_-2000-0926338570bb4bd29c46ec58faba54e7.jpg"
+            ],
+            [
+                'name' => "Air Fryer Lobster Tails with Lemon-Garlic Butter",
+                'desc' => "Air fry lobster tails for an elegant meal for two at home. They come out succulent and meaty. Delicious with lemony garlic butter and parsley.",
+                'image' => "https://www.allrecipes.com/thmb/34IkVRuLTuVzn-Dn1_cE36LonT4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/7617251-f11380e6987e48a8b9158c751a985fac.jpg"
+            ],
+            [
+                'name' => "Pasta Fagioli",
+                'desc' => "This easy pasta fagioli recipe is typical Italian hearty winter fare. Serve in bowls with a grating of Parmesan cheese, crusty bread, and salad",
+                'image' => "https://www.allrecipes.com/thmb/ujHDpu3cElFNC3LfgXyMFXM0zwA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/23842-easy-pasta-fagioli-Beauty-3x4-1-59be7d781ce742ff800ec384a6b4df9e.jpg"
+            ],
+            [
+                'name' => "Pork Chops",
+                'desc' => "Pork chops are the champs of weeknight cooking. We've gathered the best ways to cook pork chops so they stay tender, moist, and delicious.",
+                'image' => "https://www.allrecipes.com/thmb/uhL_cP-GT4Ybm9nrJ-YWgLOyf3U=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/277708-southern-smothered-pork-chops-in-brown-gravy-DDMFS-4x3-1-ba69c8e7138c48beb9675843ed44a69a.jpg"
+            ],
+            [
+                'name' => "Simple Beef Stroganoff",
+                'desc' => "This rich and creamy ground beef stroganoff with egg noodles is super simple to prepare, and ready to serve in under 30 minutes making it a great choice for busy weeknights. Garnish with freshly chopped parsley for added color and flavor.",
+                'image' => "https://www.allrecipes.com/thmb/nnfE4fPUjuLYurTurhdD-lA9w4s=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/16311-simple-beef-stroganoff-DDMFS-4x3-1e966286eef54c0f96c882e569926eb3.jpg"
+            ],
+            [
+                'name' => "Deep Fried Turkey",
+                'desc' => "Learn how to deep-fry turkey for Thanksgiving without all the fuss. This deep-fried turkey recipe is simple — no injecting, no marinades, no complicated rubs. If you like a more traditional tasting turkey, this is the one for you!",
+                'image' => "https://www.allrecipes.com/thmb/0uMysfKN0Meg-No275k7hgDXctc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/215412-simple-deep-fried-turkey-vat-01-4x3-1-fc3078f38cd542a5a223d9c53ef25596.jpg"
+            ],
+            [
+                'name' => "Swedish Meatball Sauce",
+                'desc' => "A rich and creamy Swedish meatball sauce makes a comforting meal when served over pre-cooked meatballs. This quick and easy recipe makes a generous amount of sauce for 10 ounces of frozen meatballs. Serve over egg noodles or rice.",
+                'image' => "https://www.allrecipes.com/thmb/oHmUXCWDydewIf7dCZucTlmhnxU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/218894-easy-swedish-meatball-sauce-DDMFS-4x3-c64ad3203fce47aab73434d4205aa3fa.jpg"
+            ],
+            [
+                'name' => "Chicken Piccata with Artichoke Hearts",
+                'desc' => "After eating chicken piccata in many restaurants and finding many that were 'greasy,' I came up with this recipe through much trial and error. It has wonderful flavor and is even better the next day! I like to serve it over angel hair pasta or linguine.",
+                'image' => "https://www.allrecipes.com/thmb/n-hzxbAtuLfoVhYAO3VPLidWqm4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8306384-52e00c6e52784a8cb75173a4e3b2c14c.jpg"
+            ],
+            [
+                'name' => "Simple Broiled Haddock",
+                'desc' => "This haddock recipe is very quick and easy to make. A blend of seasonings spices up the mild flavor of this wonderfully light and flaky white fish.",
+                'image' => "https://www.allrecipes.com/thmb/FZ6w-sMwT_JXUoVo0ayO_v-Lkg0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/4535513-6c4baac83f90418084c377567106a708.jpg"
+            ],
+            [
+                'name' => "Savory Sea Scallops and Angel Hair Pasta",
+                'desc' => "This scallop pasta dish is a very simple, easy-to-prep meal that you will most likely be asked to make again! The taste, if carefully prepared and not overcooked, is incredible.",
+                'image' => "https://www.allrecipes.com/thmb/Z4A6NthtaEl6QxKroCWqE0jeTjg=/282x188/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8248413-29ef09d6a2da41c79218987366431f95.jpg"
+            ],
+            [
+                'name' => "Easy Baked Chicken Tenders",
+                'desc' => "These baked chicken tenders have a deliciously crispy panko bread crumb coating for that extra crunch factor without the guilt of frying! You can marinate the tenders in light buttermilk in the refrigerator for 1 hour instead of dipping in the beaten egg.",
+                'image' => "https://www.allrecipes.com/thmb/xwBabvTPDd09TOU1H3O1zcNaRCk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/273852-EasyBakedChikenTenders-3X2-0354-1c36a6289fac49ac8dba9c598602116a.jpg"
+            ],
+            [
+                'name' => "Parmesan Crusted Tilapia Fillets",
+                'desc' => "This recipe for Parmesan-crusted tilapia is quick and easy with plenty of flavor! Even my husband (who doesn't like fish that much) went back for seconds. Works well in low-carb diets.",
+                'image' => "https://www.allrecipes.com/thmb/h1BNUUWu7EN2VEBOAgQ7uFfHb-8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1122696-parmesan-crusted-tilapia-fillets-Sherri-1x1-1-5d86199d7d7a490d9ef98a3e9a667f3b.jpg"
+            ],
+            [
+                'name' => "Super Easy Chicken and Dumplings",
+                'desc' => "This recipe for easy chicken and dumplings could not be more simple and it tastes great too!",
+                'image' => "https://www.allrecipes.com/thmb/UM_lWzvjCu4ExYNMS4xFVFhwhIo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8572612-super-easy-chicken-and-dumplings-celeste-4x3-1-d27ec58c56d645e78aa20d981c6973a1.jpg"
+            ],
+            [
+                'name' => "Creamy Garlic Chicken Pasta",
+                'desc' => "This creamy garlic chicken pasta features farfalle tossed in a garlicky mushroom sauce with sautéed chicken.",
+                'image' => "https://www.allrecipes.com/thmb/99jYv3npw90u6JFXgCkGDMDQv3w=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/233312creamy-garlic-chicken-pastafabeveryday4x3-bafa6565fa9e40bea0adfc0a9ac49158.jpg"
+            ],
+            [
+                'name' => "Broccoli Chicken Divan",
+                'desc' => "Chicken Divan with broccoli is a quick and easy casserole that's sure to be a hit with the family!",
+                'image' => "https://www.allrecipes.com/thmb/PiKO2E6vAg_c_6UXs65MQgnPZzs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8854-BroccoliChickenDivan-DDMFS-4x3-f0a68f9c9e4c4c1bac5179fc8d305f23.jpg"
+            ],
+            [
+                'name' => "Baked Salmon Fillets Dijon",
+                'desc' => "Learn how long to bake salmon at 400 degrees F with this easy recipe for delicious salmon fillets coated with Dijon-style mustard and seasoned bread crumbs drizzled with butter.",
+                'image' => "https://www.allrecipes.com/thmb/6zWlU6ojV9VN0vKiUpfOFHzgXm4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Baked-Salmon-Fillets-with-Dijon-Mustard-2000-23028416a7824c19b31ec4c851598111.jpg"
+            ],
+            [
+                'name' => "Quick and Easy Chicken Spaghetti",
+                'desc' => "This chicken spaghetti recipe is quick and easy to make. This dish has a wonderful Southern snap and yet is smooth and hearty! A great way to use last night's leftover chicken!",
+                'image' => "https://www.allrecipes.com/thmb/Ynl18ReDt9CvwsgFL6yIgDtN0RQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/26286-QuickAndEasyChickenSpaghetti-ddmfs-4X3-0844-4bc9cd72b38b44f6aaa5c04709ca7d3e.jpg"
+            ],
+            [
+                'name' => "Southern Fried Chicken Livers",
+                'desc' => "Mom made us fried chicken livers because they were cheap, and now the convenience stores sell them in the South! Use a fry screen — these things can pop and will burn you! Serve with pepper gravy or a packet of chicken gravy.",
+                'image' => "https://www.allrecipes.com/thmb/pNBknqdyeK-qaW3GQDl8FQ89ISs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/6394507-b5623700b6b64188bc40737c09b0cdd9.jpg"
+            ],
+            [
+                'name' => "Sirloin Steak with Garlic Butter",
+                'desc' => "This sirloin steak recipe is served with very garlicky butter that makes this steak melt-in-your-mouth wonderful! I have never tasted any other steak that came even close to this recipe. If you are having steak, don't skimp on flavor to save a few calories.",
+                'image' => "https://www.allrecipes.com/thmb/oHIGwiHzU_5fro3PsoDpA_KlYA0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1023331-sirloin-steak-with-garlic-butter-Cindy-Capps-Lepp-1x1-1-163c35fb36274d4d8c2456e829f3801a.jpg"
+            ],
+            [
+                'name' => "Smoked Sausage Skillet",
+                'desc' => "Looking for a quick sausage recipe for dinner? You'll have dinner on the table in no time with this one-skillet sausage and veggie dish served over rice.",
+                'image' => "https://www.allrecipes.com/thmb/9u9PU7pcWtEO1HNs46ouE1VUCzE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3485679-cc7318539dd9438aab7d0ac79be51612.jpg"
+            ],
+            [
+                'name' => "Baked Chicken Schnitzel",
+                'desc' => "Chicken schnitzel is a breeze to make in the oven. Plus, this method uses less oil and has easier cleanup. The breaded chicken breasts are baked until golden and crispy on the outside, yet they're still tender and juicy on the inside. Serve schnitzels with lemon wedges and a German-style potato salad.",
+                'image' => "https://www.allrecipes.com/thmb/Q-MU5NpyMAHw04NBws5T3-oKAf8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/244950-baked-chicken-schnitzle-kims-cooking-now-5349279-4x3-2257bfa79bd541dd8dbd692c2482b9fe.jpg"
+            ],
+            [
+                'name' => "Grilled Greek Yogurt-Marinated Chicken",
+                'desc' => "This Greek yogurt-marinated chicken infused with lemon is delicious. There is something special about what yogurt does to chicken in its smoky, sizzling time over charcoal. It imparts a tanginess that enhances all the other flavors and grills to a caramelized dark brown without tasting burnt.",
+                'image' => "https://www.allrecipes.com/thmb/XcnR7RbmZ0ikvMlguuQYjULeCzs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1011044-85546a25f4e248d1b735212e5f069a70.jpg"
+            ],
+            [
+                'name' => "Tteokbokki (Korean Spicy Rice Cakes)",
+                'desc' => "It is made with rice cakes (garaetteok, cylinder-shaped rice cake), fish cakes, boiled egg, and seasoned with chile paste. The rice cakes are chewy and tender. It looks super spicy and, originally, it is! But you can control the amount of chile paste. You might be able to find it easily at food vendors on the street of Korea. There are always delicious dukbokki boiling and ready to go. Garnish with sesame seeds if you like.",
+                'image' => "https://www.allrecipes.com/thmb/gpTRv0SjGIYp-aoF0Ubr0RtLB_s=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8001954-2c9fe28de46d4f27a7e02ab4044c1951.jpg"
+            ],
         ]);
     }
 }
