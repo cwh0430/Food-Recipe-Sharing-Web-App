@@ -83,8 +83,8 @@
                 @endforeach
                 {{-- Steps Textbox Error Message --}}
                 @if ($errors->has('steps.*'))
-                <span class="text-danger">{{ str_replace('steps.'.count($errors->get('steps.*')), 'step',
-                    $errors->first('steps.*')) }}</span>
+                <span class="text-danger">The step field is required </span> <br>
+                </span>
                 @endif
             </div>
 

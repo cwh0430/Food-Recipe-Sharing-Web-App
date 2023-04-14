@@ -76,8 +76,8 @@
           <input type="text" name="steps[]" id="step1" class="form-control">
           {{-- Steps Textbox Error Message --}}
           @if ($errors->has('steps.*'))
-          <span class="text-danger">{{ str_replace('steps.'.count($errors->get('steps.*')), 'step',
-            $errors->first('steps.*')) }}</span>
+          <span class="text-danger">The step field is required </span> <br>
+          </span>
           @endif
         </div>
       </div>
@@ -103,8 +103,7 @@
           <input type="text" name="ingredients[0]" id="ingredient0" class="form-control" placeholder="Ingredient Name">
           {{-- Ingredient Error Message --}}
           @if ($errors->has('ingredients.*'))
-          <span class="text-danger">{{ str_replace('ingredients.'.count($errors->get('ingredients.*')), 'ingredient',
-            $errors->first('ingredients.*')) }}</span>
+          <span class="text-danger">The ingredient field is required </span> <br>
           @endif
 
         </div>
@@ -116,9 +115,10 @@
             <input type="text" name="unit[0]" id="unit0" class="form-control" placeholder="unit">
             {{-- Unit Error Message --}}
             @if ($errors->has('unit.*'))
-            <span class="text-danger">{{ str_replace('unit.'.count($errors->get('unit.*')), 'unit',
-              $errors->first('unit.*')) }}</span>
+            <span class="text-danger">The unit field is required </span><br>
+
             @endif
+
           </div>
 
 
@@ -128,9 +128,10 @@
             <input type="text" name="quantity[0]" id="quantity0" class="form-control" placeholder="quantity">
             {{-- Quantity Error Message --}}
             @if ($errors->has('quantity.*'))
-            <span class="text-danger">{{ str_replace('quantity.'.count($errors->get('quantity.*')), 'quantity',
-              $errors->first('quantity.*')) }}</span>
+            <span class="text-danger">The quantity field is required </span><br>
+
             @endif
+
           </div>
         </div>
 
@@ -143,9 +144,8 @@
             placeholder="additional Information (optional)">
           {{-- Additional Info Error Message --}}
           @if ($errors->has('additionalInfo.*'))
-          <span class="text-danger">{{ str_replace('additionalInfo.'.count($errors->get('additionalInfo.*')),
-            'additional information',
-            $errors->first('additionalInfo.*')) }}</span>
+          <span class="text-danger">The additional information field is required </span><br>
+
           @endif
         </div>
       </div>
