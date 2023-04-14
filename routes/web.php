@@ -48,8 +48,8 @@ Route::delete('favorite-remove/{id}', [FavouriteController::class, 'favoriteRemo
 Route::get('/recipes/filter', [RecipeController::class, 'filter'])->name('recipes.filter');
 
 //review and rating
-Route::get('/review/{id}', [ReviewController::class, 'showReview'])->middleware('auth');
-Route::post('/review/{id}', [ReviewController::class, 'review'])->name('review')->middleware('auth');
+Route::get('/review/{id}', [ReviewController::class, 'showReview'])->middleware('can:isUser');
+Route::post('/review/{id}', [ReviewController::class, 'review'])->name('review')->middleware('can:isUser');
 
 //about and contact us
 Route::get('/team', [AboutController::class, 'team'])->name('team');
