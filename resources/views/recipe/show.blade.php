@@ -93,7 +93,7 @@ $user = auth()->user();
                             class="card-img-top" style="width: 100%; height:
                             200px; object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $recommendedRecipe->name }}</h5>
+                            <h5 class="card-title" style="height: 60px;">{{ $recommendedRecipe->name }} </h5>
                             <a href="{{ route('recipes.show', $recommendedRecipe->id) }}" class="btn btn-primary">View
                                 Recipe</a>
                         </div>
