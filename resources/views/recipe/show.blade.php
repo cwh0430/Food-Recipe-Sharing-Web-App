@@ -76,7 +76,7 @@ $user = auth()->user();
                 @endforeach
             </ul>
 
-            @if (!($recipe->getReview))
+            @if (!($recipe->getReviews))
             <h6 style="margin-top:15px;">No Rating Available</h6>
             @endif
 
