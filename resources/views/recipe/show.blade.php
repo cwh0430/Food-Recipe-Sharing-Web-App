@@ -40,6 +40,7 @@ $user = auth()->user();
             @endif
             @endauth
             @endguest
+            <br><br>
 
             <h2>Ingredients:</h2>
             <ul>
@@ -70,12 +71,12 @@ $user = auth()->user();
 
             <ul style="list-style-type: none; margin: 0; padding: 0; border: 1px solid #ddd;">
                 @foreach ($recipe->getReviews as $review)
-                <li style="padding: 8px 16px; border-bottom: 1px solid #ddd;"> {{ $review->star_rating }} ★ : {{
-                    $review->comments }}</li>
+                <li style="padding: 8px 16px; border-bottom: 1px solid #ddd;"> {{ $review->star_rating }} ★ :
+                    {{ $review->comments }}</li>
                 @endforeach
             </ul>
 
-            @if (!($recipe->getReviews))
+            @if (!($recipe->getReview))
             <h6 style="margin-top:15px;">No Rating Available</h6>
             @endif
 
@@ -86,7 +87,7 @@ $user = auth()->user();
                 <div class="col-md-12">
                     <h3>To Explore More</h3>
                 </div>
-                @foreach($recommendedRecipes as $recommendedRecipe)
+                @foreach ($recommendedRecipes as $recommendedRecipe)
                 <div class="col-sm-4 mb-3 ">
                     <div class="card food">
                         <img src="{{ $recommendedRecipe->image }}" alt="{{ $recommendedRecipe->name }}"
