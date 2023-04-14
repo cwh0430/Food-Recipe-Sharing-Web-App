@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
             [
                 'name' => "hon",
                 'email' => "hon@gmail.com",
-                'isAdmin' => 0,
+                'isAdmin' => 1,
                 'password' => '$2y$10$wJuY9wBBHxEaXYAxEzV9t./QTTQzod140dTPtdoBsGYa5N8DAOGwS',
 
             ],
