@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
                 'name' => "WHuey",
                 'email' => "abc@def.com",
                 'isAdmin' => 1,
-                'password' => '$2y$10$P8DSRIQce52ck1Ql8vvSMemWXw.9nEmgyyL/cXmqTRSuzF2PRZDSi',
+                'password' => '$2y$10$owu8QkmeukvFGH9c7PoEaOHlsbZO9xCvnt27Uo.N8y48HtOE5ME2q',
 
             ],
             [
