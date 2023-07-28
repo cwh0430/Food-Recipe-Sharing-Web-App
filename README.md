@@ -1,66 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Food Recipe Sharing Web App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Web Objectives:
+- Allow users to view shared recipes on the website.
+- Enable users to rate and leave reviews for recipes.
+- Provide the functionality to add recipes to a favorites list.
+- Allow administrators to perform CRUD operations for recipe management.
 
-## About Laravel
+How to Use (First-Time User):
+1. clone the repo in your desired directory by running git clone <URL>
+2. run **composer install** in your project directory to install all dependencies required to run your project
+3. run **copy .env.example .env**
+4. Open your .env file and check DB_DATABASE, DB_USERNAME, DB_PASSWORD, and MAKE SURE your DB_PORT is same as your wamp
+5. Run **php artisan key:generate**
+6. Create a database call **"foodbank" (utf8mb4_unicode_ci)** and Run php artisan migrate
+7. Run **npm install and npm run dev / npm install && npm run dev**
+8. Open new cmd and run **php artisan serve**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+To run server:
+1. Run npm run dev
+2. Open new terminal and run php artisan serve
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Sample Image of the Web App:
+![image](https://github.com/cwh0430/Food-Recipe-Sharing-Web-App/assets/108912628/4be0a670-7d11-4837-9766-6faa378fb22d)
 
-## Learning Laravel
+Home page of the Web App with navbar, search, and filter functions
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![image](https://github.com/cwh0430/Food-Recipe-Sharing-Web-App/assets/108912628/8846095b-343a-47da-9d37-ad588c1b0e5c)
+![image](https://github.com/cwh0430/Food-Recipe-Sharing-Web-App/assets/108912628/f9365909-7de8-4045-b915-e1bfb7d16e13)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Recipe Details Page along with Reviews and random recipe recommendations displayed 
 
-## Laravel Sponsors
+CRUD of Recipes:
+![image](https://github.com/cwh0430/Food-Recipe-Sharing-Web-App/assets/108912628/748efb43-4c4b-444c-9f77-8f665f13b4ea)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+View Recipe List/ Delete a Particular Recipe
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![image](https://github.com/cwh0430/Food-Recipe-Sharing-Web-App/assets/108912628/21022605-fe3f-4c1a-82b6-83b5f352ac88)
+Create New Recipe Page
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![image](https://github.com/cwh0430/Food-Recipe-Sharing-Web-App/assets/108912628/513e8246-23e2-4c3d-886e-f840f48a3cdb)
 
-## Code of Conduct
+Edit Existing Recipe Page
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
